@@ -1,0 +1,30 @@
+package cn.tedu.spring;
+
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class SpringTest {
+
+	public static void main(String[] args) {
+		// 加载Spring的配置文件，获取Spring容器
+		AbstractApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		// 通过Spring容器获取对象
+		/*UserDao userDao = (UserDao) ac.getBean("userDao");*/
+		User user = ac.getBean("user");
+		UserService userService = (UserService) ac.getBean("userService");
+		// 测试输出
+	/*	System.out.println("userdao.username:"+userDao.username);
+		System.out.println("userdao.password:"+userDao.password);*/
+		userService.reg();
+		//释放资源
+		ac.close();                   
+	}
+	
+}
+
+
+
+
+

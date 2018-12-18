@@ -1,0 +1,32 @@
+package demo;
+
+import javax.servlet.http.HttpServletRequest;
+
+import base.annotation.RequestMapping;
+
+public class LoginController {
+	
+	@RequestMapping("/toLogin.do")
+	public String toLogin() {
+		System.out.println("LoginController's toLogin()");
+		return "login";
+	}
+	
+	@RequestMapping("/login.do")
+	public String login(HttpServletRequest request){
+		System.out.println("LoginController's login()");
+		String username = request.getParameter("username");
+		System.out.println("username:"+username);
+		String password = request.getParameter("pwd");
+		System.out.println("password:"+password);
+		if
+		//如果视图名以redirect:开头，表示重定向到某个地址。
+		return "redirect:toWelcome.do";
+	}
+	
+	@RequestMapping("/toWelcome.do")
+	public String toWelcome() {
+		System.out.println("LoginController's toWelcome()");
+		return "welcome";
+	}
+}

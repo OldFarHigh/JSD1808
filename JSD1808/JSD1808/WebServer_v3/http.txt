@@ -1,0 +1,87 @@
+HTTP协议--超文本传输协议
+该协议应用在浏览器与服务器之间。HTTP协议是应用层协议。
+规定了应用在在浏览器和服务器之间。HTTP协议时应用层协议。
+规定了浏览器与服务端之间传输数据的方式，以及数据内容定义等规则
+而HTTP协议要其求必须建立在可靠的传输协议基础之上，通常我们使用的传输协议为TCP协议。
+
+
+
+
+HTTP协议规定了客户端（浏览器）与服务器之间的交互规则：
+要求客户端发起请求（Request）,服务端接收请求并处理
+然后响应（Response）。不允许服务端主动响应客户端
+
+HTTP协议要求所使用的字符集为ISO8859-1，该字符集不支持中文字符，
+所以对于传输中文内容需要特别处理。
+
+HTTP协议由万维网制定（W3C），详细更多可以参看其官网
+
+URL：统一资源定位
+我们在浏览器上输入的“网址”就是一个URL
+
+
+URL的格式如：
+http://www.baidu.com/index.html
+http://localhost:8088/shop/login.html
+
+URL分为三部分
+
+protocol://host/abs_path
+即：
+应用协议://服务器地址信息/请求资源的抽象路径
+参见图:url.png
+
+
+HTTP请求：
+请求是客户端发送给服务端的内容。
+一个请求由岁那部分构成：
+请求行，消息头，消息正文
+
+（1）请求行：请求行是一行字符串，以CRLF结尾
+注：	CR，LF是asc编码中的回车符与换行符
+		CR：对应编码值为13
+		LF ：对应编码值为10
+
+A、请求行由三部分组成，格式为：method 		url 					protocal(CRLF)
+											    请求方式  URL中的抽象路径    使用的协议
+如：											GET	 / index.html HTTP	/1.1(CRLF)
+
+B、请求方式常见的：	GET：地址栏方式请求，通常用户传递的参数会被包含在抽象路径中。
+								POST：打包传输，用户传递的数据会包含在消息正文中。
+							
+（2）消息头：消息头由若干行组成，每一行为一个具体的消息头信息
+					消息头是客户端发送给服务端的附加信息，用于说明很多信息
+					比如告知服务端客户端使用的浏览器信息，请求的路径，交互方式，消息正文内容及长度等等
+					每一行字符串（一个消息头内容）都以CRLF结尾。
+					最后一个消息头结束后会单独发送一个CRLF表示消息头部分结束。
+					
+		格式如：name    	  ：  value      (CRLF)	
+					消息头名字  ： 对应的值（CRLF）
+						
+		例如：	Host: localhost:8088(CRLF)
+				  	Connection: keep-alive(CRLF)
+				  	Cache-Control: max-age=0(CRLF)
+					Upgrade-Insecure-Requests: 1(CRLF)
+					User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36(CRLF)
+					Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8(CRLF)
+					Accept-Encoding: gzip, deflate, br(CRLF)
+					Accept-Language: zh-CN,zh;q=0.8	(CRLF)(CRLF)
+	
+（3）消息正文：消息正文是2进制数据（不一定是文本数据），是用户传递给服务端的内容
+						一个请求中可以不包含消息正文。
+						是否含有消息正文可以根据消息头是否存在：Content-Type，Content-Length这两个头来判定。
+						若消息头不含有这两个头信息，则请求不含有消息正文。
+				 注:   Content-Type  	用来说明消息正文的数据类型。
+				 	    Content-Length   用来说明消息正文总共多少字节。
+				 	    
+				 	    
+一个完整的请求大致如下：
+GET /index.html HTTP/1.1(CRLF)
+Host: localhost:8088(CRLF)
+Connection: keep-alive(CRLF)
+Cache-Control: max-age=0(CRLF)
+Upgrade-Insecure-Requests: 1(CRLF)
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36(CRLF)
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8(CRLF)
+Accept-Encoding: gzip, deflate, br(CRLF)
+Accept-Language: zh-CN,zh;q=0.8	(CRLF)(CRLF)

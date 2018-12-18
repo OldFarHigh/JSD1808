@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo</title>
+<script type="text/javascript">
+	function myfn(){
+		for(var a =0;a<t1.value;a++ ){
+			for(var b=0;b<t2.value;b++){
+				mydiv.innerHTML += "<div></div>";
+			}
+			mydiv.innerHTML +="<br>";
+		}
+			
+	}
+</script>
+<style type="text/css">
+	#mydiv{
+		width:500px;
+		height:500px;
+		border:1px solid green;
+	}
+	#mydiv>div{
+		width:30px;
+		height:30px;
+		display:inline-block;
+		background-color:red;
+		margin:5px;
+	}
+</style>
+</head>
+<body>
+	<input type="text" id= "t1" placeholder="rows">
+	<input type="text" id= "t2" placeholder="cols">
+	<input type="button" value="add" onclick="myfn()">
+	<div id="mydiv" ></div>
+</body>
+</html>

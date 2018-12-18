@@ -1,0 +1,9 @@
+package service;
+/**
+ * 模型
+ * @author OldFarHigh
+ *
+ */
+public class BmiService {
+
+}

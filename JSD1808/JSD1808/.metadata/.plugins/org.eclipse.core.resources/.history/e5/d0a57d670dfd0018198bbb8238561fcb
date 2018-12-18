@@ -1,0 +1,23 @@
+package tag;
+
+import java.io.IOException;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.PageContext;
+import javax.servlet.jsp.tagext.SimpleTagSupport;
+
+public class HelloTag extends SimpleTagSupport{
+
+	@Override
+	public void doTag() throws JspException, IOException {
+		/*
+		 * 通过继承自SimplTagSupport类的方法来获得pageContext。
+		 * 该对象提供了获得其他所有隐含对象的方法
+		 */
+		PageContext pctx = (PageContext)getJspContext();
+		JspWriter out = pctx.getOut();
+		for(int i=0;i<100;i++){
+			out.println("Hello Kitty<br/>");
+	}
+	}
+}

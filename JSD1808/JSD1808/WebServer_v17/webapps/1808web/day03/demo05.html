@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*后代选择器 div p span{} 选取div里面的  */
+	/*#d1 div p span{
+		color: red;
+	} */
+	/*id 为d1元素下的div里面的所有的后代span  */
+	/* #d1 div span{
+		background-color: blue;
+	} */
+	/*id 为d1元素下所有的后代span  */
+	/* #d1 span{
+		border: 10px solid pink;
+	} */
+	/* div span{
+		color: green;
+	} */
+/*子元素选择器 div>p>span{}  */
+	#d1>div>span{
+		border:1px solid red;
+	}
+	div>div>span{
+		background-color: yellow;
+	}
+	p>span{
+		color:blue;
+	}
+	
+</style>
+</head>
+<body>
+	<div id="d1">
+		<div>
+			<span>span1</span>
+		</div>
+		<div>	
+			<p>
+				<span>span2</span>
+			</p>
+		</div>
+	</div>
+	
+	<div id="d2">
+		<div>
+			<span>span3</span>
+		</div>
+		<div>	
+			<span>span4</span>
+		</div>
+	</div>
+</body>
+</html>

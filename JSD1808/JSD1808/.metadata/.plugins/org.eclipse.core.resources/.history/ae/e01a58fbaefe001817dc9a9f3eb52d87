@@ -1,0 +1,19 @@
+package demo;
+
+import base.annotation.RequestMapping;
+
+public class LoginController {
+	
+	@RequestMapping("/toLogin.do")
+	public String toLogin() {
+		System.out.println("LoginController's toLogin()");
+		return "login";
+	}
+	
+	@RequestMapping("/login.do")
+	public String login(){
+		System.out.println("LoginController's login()");
+		//如果视图名以redirect:开头，表示重定向到某个地址。
+		return "redirect:toWelcome.do";
+	}
+}

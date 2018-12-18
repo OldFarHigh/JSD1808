@@ -1,0 +1,6 @@
+package cn.tedu.spring.dao;
+
+public class UserDao {
+	
+	
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>bMIServlet</servlet-name>
+		<servlet-class>web.BMIServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bMIServlet</servlet-name>
+		<url-pattern>/bmi</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>bmiServlet</servlet-name>
+		<servlet-class>web.bmiServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bmiServlet</servlet-name>
+		<url-pattern>/BMI</url-pattern>
+	</servlet-mapping>
+</web-app>

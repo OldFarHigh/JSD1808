@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>图片</title>
+</head>
+<body>
+	<!--如果图片和页面在同一目录，则直接写文件名   alt:当图片不能正常显示的时候显示的内容  
+	weight/height:设置图片的宽高 两种赋值方式：1、通过-->	
+	<img alt="图片加载失败" src="322027.jpg" width="10%">
+	<!--如果图片在页面的上一级目录，则在文件名前面添加../ 上两级../../  -->
+	<img alt="" src="../322632.jpg" width="400px" height ="400px">
+	<!-- 如果图片在页面的同级文件夹下面，则在图片名字前面加上文件夹的名字 -->
+	<img alt="" src="a/309199.jpg">
+	<!-- 也可以用绝对路径  title:当鼠标在图片上悬停时显示的文本内容-->
+	<img title="我是绝对路径的图片" alt="" src="http://cdn.tmooc.cn/bsfile//courseImg///DA1B05F42D8648DF90FA9555BFC47921.png" >
+	<!--支持的图片格式：1、jps和jpeg 2.png（支持透明色） 3.gif  -->
+	<img alt="" src="../imgs/2.gif" width="80%">
+</body>
+</html>

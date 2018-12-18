@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>bMIServlet</servlet-name>
+		<!--
+			需要填写servlet完整的类名和包名
+			注：
+				servlet容器会利用java反射机制来加载servlet，并且将其实例化。  
+		-->
+		<servlet-class>web.BMIServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+			<servlet-name>bMIServlet</servlet-name>
+			<!-- url-pattern用来告诉容器该servlet处理哪些请求 -->
+			<url-pattern>/BMI</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

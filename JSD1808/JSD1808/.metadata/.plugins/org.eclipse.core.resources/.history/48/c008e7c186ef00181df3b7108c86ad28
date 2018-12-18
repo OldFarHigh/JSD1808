@@ -1,0 +1,11 @@
+package cn.tedu.day02;
+/**
+ * 对DBUtils_Test 的测试
+ * @author OldFarHigh
+ *
+ */
+public class Test01 {
+	public static void main(String[] args) {
+		
+	}
+}

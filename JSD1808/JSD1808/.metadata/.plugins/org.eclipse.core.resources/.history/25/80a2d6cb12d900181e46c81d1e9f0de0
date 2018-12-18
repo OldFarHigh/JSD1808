@@ -1,0 +1,13 @@
+package dayTest_1026;
+
+
+public class Base {
+private void test() {
+System.out.println(6 + 6 + "(Result)");
+}
+static public void main(String[] a) {
+new Base().test();
+}
+}
+	
+

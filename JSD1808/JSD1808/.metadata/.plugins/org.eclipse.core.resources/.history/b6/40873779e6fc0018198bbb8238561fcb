@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="bean.*" %>
+<%@ taglib uri="" prefix="" %>
+<html>
+<head>
+<title>choose</title>
+</head>
+<body style="font-size:30px;">
+	<%
+		User user = new User();
+		user.setGender("x");
+		request.setAttribute("user", user);
+	%>
+	性别：
+	
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>订单练习</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#i5").click(function(){
+			$(":cheeckbox").css("checked","checked");
+			$("p").ine
+		})
+		$("input").click(function(){
+			$(":checked").text("")追加内容
+		})
+	})
+</script>
+</head>
+<body>
+	<h3>订单练习</h3>
+	<input type="checkbox"  name="item" value="300" id="i1"><label for="i1">phone:300$</label><br>
+	<input type="checkbox"  name="item" value="3" id="i2" ><label for="i2">pen:3$</label><br>
+	<input type="checkbox"  name="item" value="10" id="i3" ><label for="i3">notebook:10$</label><br>
+	<input type="checkbox"  name="item" value="3000" id="i4" ><label for="i4">computer:3000$</label><br>
+	<hr>
+	<input type="checkbox" id="i5" ><label for="i5">ALL IN</label>
+	<p id="total_p">Price:0$</p>
+</body>
+</html>

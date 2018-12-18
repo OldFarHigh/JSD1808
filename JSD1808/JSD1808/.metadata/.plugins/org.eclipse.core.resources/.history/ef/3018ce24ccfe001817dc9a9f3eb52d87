@@ -1,0 +1,119 @@
+package web;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
+
+import common.Handler;
+import common.HandlerMapping;
+/**
+ * 在init方法里面，读取smartmvc配置文件的内容，然后将处理器实例化
+ * @author OldFarHigh
+ *
+ */
+
+public class DispatcherServlet extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+	private HandlerMapping handlerMapping;
+	
+	@Override
+	public void init() throws ServletException {
+		/**
+		 * 读取SmartMVC框架的配置文件（smartmvc.xml），然后将该配置文件中配置好的处理器实例化
+		 */
+		String fileName = getServletConfig().getInitParameter("configLocation");
+		System.out.println("smartmvc-test's fileName："+fileName);
+		SAXReader reader =  new SAXReader();
+		InputStream in = getClass().getClassLoader().getResourceAsStream(fileName);
+		try {
+			Document doc = reader.read(in);
+			Element root = doc.getRootElement();
+			List<Element> elements = root.elements();
+			List beans = new ArrayList();
+			for (Element ele : elements) {
+				String className  =  ele.attributeValue("class");
+				System.out.println("smartmvc-test's 处理器名："+className);
+				Object  bean  = Class.forName(className).newInstance();
+				beans.add(bean);
+			}
+			System.out.println("smartmvc-test's 处理器集合："+beans);
+			//创建handler对象，该对象负责处理请求路径和处理器的对应关系
+			handlerMapping = new HandlerMapping();
+			//process() 方法处理请求路径和处理器的对应关系
+			handlerMapping.process(beans);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new ServletException(e);
+		}
+	}
+
+	
+	
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//获取请求对象路径
+		String uri = request.getRequestURI();
+		System.out.println("smavtmvc-test's uri:"+uri);
+		//获取请求对象的应用名
+		String contextPath = request.getContextPath();
+		//获得截取应用名后的请求路径
+		String path = uri.substring(contextPath.length());
+		System.out.println("smartmvc-test's path:"+path);
+		//根据请求路径获取对应的处理器
+		Handler handler = handlerMapping.getHandler(path);
+		System.out.println("smartmvc-test's handler:"+handler);
+		
+		Method mh = handler.getMh();
+		Object obj = handler.getObj();
+		try {
+			/*
+			 * 先查看处理方法是否有参数，如果有参数的话，获取参数类型，
+			 * 							没有参数的话，直接调用获取返回值。
+			 */
+			//获取处理方法的参数类型
+			Class[] types = mh.getParameterTypes();
+			//获取处理方法的返回值
+			Object returnVale= null;
+			if(types.length == 0) {
+				//没有参数
+				returnVale= mh.invoke(obj);
+				
+			}else {
+			//获得视图名
+			String viewName = returnVale.toString();
+			System.out.println("smartmvc-test's viewName:"+viewName);
+			/*
+			 * 默认情况下，直接进行转发操作，
+			 * 如果返回值是以"redirect："开头的则需要进行重定向操作
+			 */
+			if(viewName.startsWith("redirect:")) {
+				//重定向
+				String redirectPath =contextPath+"/"+viewName.substring("redirect:".length());
+				System.out.println("smartmvc-test's redirectPath:"+redirectPath);
+				response.sendRedirect(redirectPath);
+			}else {
+				//转发
+				String jspPath = "/WEB-INF/"+viewName+".jsp";
+				request.getRequestDispatcher(jspPath).forward(request, response);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new ServletException(e);
+		}
+	}
+
+}

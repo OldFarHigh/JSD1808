@@ -1,0 +1,9 @@
+package cn.tedu.spring;
+/**
+ * 
+ * @author OldFarHigh
+ *
+ */
+public class UserDao {
+
+}

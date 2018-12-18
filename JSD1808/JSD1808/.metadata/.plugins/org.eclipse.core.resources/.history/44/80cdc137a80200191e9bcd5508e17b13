@@ -1,0 +1,11 @@
+package cn.tedu.spring;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class RegController {
+	@RequestMapping("reg.do")
+	public String reg() {
+		System.out.println("RegController.reg()");
+		return "reg";
+	}
+}

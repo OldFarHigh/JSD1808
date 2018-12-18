@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test01</title>
+<script type="text/javascript">
+	var reg =/^\w{6,10}$/;
+	function usernamefn(){
+		var reg =/^\w{6,10}$/;
+		if(reg.test(i1.value)){
+			s1.className ="ok";
+			return true;
+		}else{
+			s1.className = "err";
+			return false;
+		}
+	}
+	function passwordfn(){
+		var reg =/^\w{6,10}$/;
+		if(reg.test(i2.value)){
+			s2.className ="ok";
+			return true;
+		}else{
+			s2.className = "err";
+			return false;
+		}
+	}
+</script>
+<style type="text/css">
+	.ok{
+		display:none;
+	}
+	.err{
+		display:inline;
+	}
+</style>
+</head>
+<body>
+<form action="http://www.sina.com"  onsubmit="return usernamefn()+passwordfn()==2">
+	username:<input type="text" onblur="usernamefn()"id="i1"><span id="s1" class="ok">Error</span><br>
+	password:<input type="text" onblur="passwordfn()" id="i2"><span id="s2" class="ok">Error</span><br>
+	<input type ="submit" value="reg" ><a href="doc.tedu.cn" onclick="return false">doc</a>
+</form>
+	
+</body>
+</html>

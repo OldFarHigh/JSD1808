@@ -1,0 +1,11 @@
+package reflect;
+
+public class TestCase2 {
+	
+	public static void main(String[] args) throws ClassNotFoundException {
+		Class clazz = Class.forName("reflect.B");//动态加载B类3
+		
+		
+	}
+	
+}	

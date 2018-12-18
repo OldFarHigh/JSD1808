@@ -1,0 +1,9 @@
+package base.common;
+/**
+ * 该类封装了处理器及方法对象，目的是为了方便利用java反射去调用处理器的方法。
+ * @author OldFarHigh
+ *
+ */
+public class Handler {
+	private Method
+}

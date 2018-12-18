@@ -1,0 +1,30 @@
+访问数据库：
+step1：
+	建表
+create database jsd1808db default character  set utf-8;
+create table t_user(
+	id int primary key auto_increment,
+	username varchar(50) unique,
+	password varchar(20),
+	email varchar(30)
+);
+step2：
+	导包
+	<dependencies>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+	</dependencies>
+step3：
+	添加jdbc.properties文件
+step4:
+	添加DBUtils文件
+step5:
+	添加用户

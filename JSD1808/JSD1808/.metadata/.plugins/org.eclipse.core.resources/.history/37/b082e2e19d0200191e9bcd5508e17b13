@@ -1,0 +1,20 @@
+package cn.tedu.spring;
+
+import org.springframework.stereotype.Controller;
+
+/**
+ * 
+ * @author OldFarHigh
+ *
+ */
+@Controller
+public class HelloController {
+	
+	//处理请求的方法的声明（暂行标准）
+	//1、使用public权限
+	//2、使用String作为返回值类型
+	//3、方法名称自定义
+	//4、无参数
+	
+	
+}

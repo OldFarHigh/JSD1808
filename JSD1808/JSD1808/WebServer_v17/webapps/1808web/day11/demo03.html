@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>鼠标大战僵尸</title>
+<style type="text/css">
+	body{
+		background-image: url("../zombimgs/bg1.jpg");
+		overflow:hidden;
+	}
+	img{
+		position : absolute;
+		width:80px;
+		height:90px;
+	}
+	#successh3{
+		float:left;
+	}
+	#failh3{
+		float:right;
+	}
+</style>
+<script type="text/javascript">
+	//统计成功失败次数的变量
+  	var failCount = 0;
+  	var successCount =0;
+	onload = function(){
+		changeSize();
+	}
+	//窗口尺寸改变事件
+	onresize = function(){
+		changeSize();
+	}
+/*改变窗口的尺寸的方法*/
+	function changeSize(){
+		//得到窗口的宽高
+		var width = document.body.parentElement.clientWidth;
+		var height = document.body.parentElement.clientHeight;
+		//alert(width+"-"+height);
+		//修改body背景图片的尺寸为窗口尺寸
+		document.body.style.backgroundSize = width+"px "+height+"px";
+	}
+/*开启添加僵尸的定时器*/
+	setInterval(function(){
+		//创建僵尸图片
+		var img = document.createElement("img");
+		var type= Math.floor(successCount/30);
+		//控制僵尸图片类型
+		if(type>3){
+			type = 3;
+		}
+		img.src="../zombimgs/zomb"+type+".png";
+		document.body.appendChild(img);
+		//控制僵尸的位置
+		var width = document.body.parentElement.clientWidth;
+		var height = document.body.parentElement.clientHeight;
+		//设置x的值为窗口的宽度
+		img.style.left= width+"px";
+		//设置y值为随机数
+		var y  = Math.floor(Math.random()*(height-90));
+		img.style.top=y+"px";
+		
+		//给僵尸图片添加鼠标移入事件（动态绑定事件）
+		img.onmouseover = function(){
+			//把事件源删除 this代表事件源
+			//this.parentElement得到元素的上级元素
+			this.parentElement.removeChild(this);
+			//让成功次数加1
+			successCount++;
+			//显示成功次数	
+			successh3.innerText = "成功次数："+successCount;
+		}
+	},1000);
+/*开启移动僵尸的定时器*/
+ 	setInterval(function(){
+		//得到所有的僵尸图片
+		var imgs = document.getElementsByTagName("img");
+		//遍历僵尸图片
+		for(var i=0;i<imgs.length;i++){
+			var img = imgs[i];
+			//得到原来的left
+			var oldLeft = parseInt(img.style.left);
+			oldLeft -=2;
+			//修改之后的值再赋值回去
+			img.style.left=oldLeft+"px";
+			
+			//判断僵尸移出屏幕 删除
+			if(oldLeft<=0){
+				//删除
+				document.body.removeChild(img);
+				//让失败次数+1
+				failCount++;
+				//显示失败次数
+				failh3.innerText = "失败次数："+failCount;
+			}
+		}
+},10);
+</script>
+</head>
+<body>
+	<h3 id="successh3">成功次数：0</h3>
+	<h3 id="failh3">失败次数：0</h3>
+</body>
+</html>

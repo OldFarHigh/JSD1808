@@ -1,0 +1,36 @@
+package reflect;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.Scanner;
+
+public class TestCase {
+
+	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+		Scanner scanner  = new Scanner(System.in);
+		//通过控制台读取类名
+		String className = scanner.nextLine();
+		
+		System.out.println("className:" + className);
+		//利用java反射加载类，并且将类实例化
+		Class clazz = Class.forName(className);
+		Object obj = clazz.newInstance();
+		System.out.println("obj:"+ obj);
+		
+		//获得所有方法
+		Method[] methods = clazz.getDeclaredMethods();
+		
+		//遍历所有方法
+		for(Method mh : methods) {
+			//获得方法名
+			String mName = mh.getName();
+			System.out.println("mName:" + mName);
+			//调用方法(目标方法不带参)
+			Object returnVal = mh.invoke(obj);
+			System.out.println("returnValue:"+returnVal);
+		}
+		
+		scanner.close();
+	}
+
+}

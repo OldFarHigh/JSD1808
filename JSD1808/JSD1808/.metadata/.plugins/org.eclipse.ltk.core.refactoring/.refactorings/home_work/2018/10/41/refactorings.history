@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;Test/src&apos;&#x0A;- Original project: &apos;home_work&apos;&#x0A;- Destination element: &apos;Test/src&apos;&#x0A;- Original elements:&#x0A;     se2_home_work&#x0A;     se2_home_work_answer&#x0A;     se1_home_work&#x0A;     se1_home_work_answer" description="Copy folders" destination="=Test/src" element1="se2_home_work" element2="se2_home_work_answer" element3="se1_home_work" element4="se1_home_work_answer" files="0" flags="589830" folders="4" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1539417395525" units="0" version="1.0"/>
+</session>

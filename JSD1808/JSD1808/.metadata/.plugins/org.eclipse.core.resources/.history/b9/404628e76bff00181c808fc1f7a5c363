@@ -1,0 +1,9 @@
+package cn.tedu.spring;
+
+public class Car {
+
+	public Car(Object obj) {
+		super();
+	}
+	
+}

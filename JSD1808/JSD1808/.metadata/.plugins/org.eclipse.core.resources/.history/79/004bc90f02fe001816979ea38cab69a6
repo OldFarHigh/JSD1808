@@ -1,0 +1,10 @@
+package demo;
+/**
+ * 方法前要添加@RequestMapping注解，该注解用来指定该方法用来处理哪个请求。方法返回视图名。
+ * author OldFarHigh
+ *
+ */
+public class HelloController {
+	@RequetsMapping("/hello.do")
+	
+}

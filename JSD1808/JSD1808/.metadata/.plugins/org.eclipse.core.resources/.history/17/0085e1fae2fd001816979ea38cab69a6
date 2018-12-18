@@ -1,0 +1,10 @@
+package demo;
+/**
+ * 处理器：
+ * 		负责业务逻辑的处理。
+ * @author OldFarHigh
+ *
+ */
+public class HelloController {
+	
+}

@@ -1,0 +1,16 @@
+package dayTest_1026;
+
+
+public class Base{
+public static void main (String[] args){
+	String s= "Example";
+	s =s+10;
+	System.out.println(s);
+}
+//public synchronized void go() { /* code here */ }
+private synchronized(this) void go() { /* code here */ }
+synchronized(Object.class) { /* code here */ }
+}
+}
+	
+

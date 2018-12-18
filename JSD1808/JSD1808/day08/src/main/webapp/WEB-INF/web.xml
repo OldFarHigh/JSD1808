@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>lifeServlet</servlet-name>
+		<servlet-class>web.LifeServlet</servlet-class>
+		<!--用来配置初始化参数  -->
+		<init-param>
+			<param-name>company</param-name>
+			<param-value>IBM</param-value>
+		</init-param>
+		<init-param>
+			<param-name>user</param-name>
+			<param-value>OldFarHigh</param-value>
+		</init-param>
+		<!--
+			配置启动加载（容器启动之后，会立即创建servlet实例）
+			参数值是一个大于或者等于零的整数，容器会依据从小到大的顺序来创建,值越小的越先被创建
+		  -->
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>lifeServlet</servlet-name>
+		<url-pattern>/life</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>bmiServlet</servlet-name>
+		<servlet-class>web.BMIServlet</servlet-class>
+		<init-param>
+			<param-name>male</param-name>
+			<param-value>20,25</param-value>
+		</init-param>
+		<init-param>
+			<param-name>female</param-name>
+			<param-value>19,24</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bmiServlet</servlet-name>
+		<url-pattern>/bmi</url-pattern>
+	</servlet-mapping>
+</web-app>

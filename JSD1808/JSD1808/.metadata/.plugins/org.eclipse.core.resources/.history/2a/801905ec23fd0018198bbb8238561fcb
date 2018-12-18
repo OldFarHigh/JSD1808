@@ -1,0 +1,14 @@
+package service;
+/**
+ * 模型：
+ * 		负责业务逻辑的处理。
+ * 
+ * @author OldFarHigh
+ *
+ */
+public class BmiService {
+	public String bmi(double height,double weight) {
+		
+		return null;
+	}
+}

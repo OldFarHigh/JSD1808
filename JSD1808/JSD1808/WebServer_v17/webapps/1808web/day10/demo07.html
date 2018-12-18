@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo07</title>
+<script type="text/javascript">
+	function myfn(x){
+		if(x == 1){//添加
+			var li = document.createElement("li");
+			//设置显示的文本
+			li.innerText =i1.value;
+			//添加到ul里面
+			myul.appendChild(li);
+		}else if(x == 2){//插入
+			var li = document.createElement("li");
+			//设置显示的文本
+			li.innerText =i1.value;
+			//插入到ul里面
+			myul.insertBefore(li,sh);
+		}else{//删除
+			myul.removeChild(sh);
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="i1">
+	<input type="button" value="add" onclick="myfn(1)">
+	<input type="button"  value="insert" onclick="myfn(2)">
+	<input type="button" value="remove" onclick="myfn(3)">
+	<hr>
+	<ul id="myul">
+		<li>北京</li>
+		<li id="sh">上海</li>
+		<li>广州</li>
+	</ul>
+</body>
+</html>

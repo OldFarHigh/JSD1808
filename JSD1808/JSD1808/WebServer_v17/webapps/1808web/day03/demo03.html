@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>选择器</title>
+<style type="text/css">
+/*id选择器：#id{}  */
+	#d2{
+		color:red;
+	}
+/*类选择器（基础选择器） .class{}  */
+	.c1{
+		background-color: green;
+	}
+/*属性选择器  基础选择器【属性名：‘属性值 ’】 */
+	input[type="text"]{
+		background-color: pink;
+	}
+	input[type="password"]{
+		background-color: blue;
+	}
+</style>
+</head>
+<body>
+	<div>div1</div>
+	<div id="d2">div2</div>
+	<div class="c1">div3</div>
+	<div>div4</div>
+	<span>span1</span>
+	<span>span2</span>
+	<span class="c1">span3</span>
+	<span>span4</span>
+	<hr>
+	<input type="text" placeholder="用户名1">
+	<input type="text" placeholder="用户名2">
+	<input type="password" placeholder="密码1">	
+	<input type="password" placeholder="密码2"> 	
+</body>
+</html>

@@ -1,0 +1,12 @@
+package cn.tedu.spring;
+
+
+/**
+ * 当没有显式的添加构造方法时
+ * 编译器会自动添加公有的、无参数的构造方法
+ * @author OldFarHigh
+ *
+ */
+	public class User {
+
+}

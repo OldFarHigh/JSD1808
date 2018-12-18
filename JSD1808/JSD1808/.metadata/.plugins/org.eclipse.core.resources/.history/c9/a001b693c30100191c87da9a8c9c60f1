@@ -1,0 +1,16 @@
+package cn.tedu.spring;
+
+import java.util.List;
+/**
+ * 因为names属性的类型是list
+ * @author OldFarHigh
+ *
+ */
+public class SampleBean {
+	
+	public List<String> names;
+
+	public void setNames(List<String> names) {
+		this.names = names;
+	}
+}

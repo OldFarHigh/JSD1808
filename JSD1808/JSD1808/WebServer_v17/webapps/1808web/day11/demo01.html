@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>二级联动</title>
+<script type="text/javascript">
+	var arr = [["秦皇岛","唐山","石家庄"],["太原","烟台","潍坊"],["太原","运城","大同"]];
+	function myfn(){
+		//清空原有内容
+		s2.innerHTML="<option>请选择</option>"
+		//alert(s1.value);//得到选择省份对应的下标
+		var citys = arr[s1.value];//通过下标找到对应的城市
+		for(var i=0;i<citys.length;i++){
+			//得到城市名称
+			var city = citys[i];
+			//创建option元素并把city显示到里面
+			var opt = document.createElement("option");
+			opt.innerText = city;
+			//把option添加到s2里面
+			s2.appendChild(opt);
+		}
+		
+		/* for(var i=0;i<arr.length;i++){
+			if(i==parseInt(s1.value)){
+			for(var j=0;j<3;j++){
+				var str = "<option>"+arr[i][j]+"</option>";
+				s2.innerHTML += str;
+			}
+			}
+			} */
+		}
+</script>
+</head>
+<body>
+	<select id="s1" onchange="myfn()">
+		<option>请选择</option>
+		<option value="0"> 河北</option>
+		<option value="1">山东</option>
+		<option value="2">山西</option>
+	</select> 
+	<select id="s2">
+		<option>请选择</option>
+	</select>
+</body>
+</html>

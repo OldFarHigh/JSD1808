@@ -1,0 +1,31 @@
+package cn.tedu.spring;
+
+import java.util.List;
+import java.util.Set;
+/**
+ * 因为names属性的类型是list
+ * @author OldFarHigh
+ *
+ */
+public class SampleBean {
+	
+	public List<String> names;
+	public Set<String> cities;
+	
+	public Set<String> getCities() {
+		return cities;
+	}
+
+	public void setCities(Set<String> citys) {
+		this.cities = citys;
+	}
+
+	public void setNames(List<String> names) {
+		this.names = names;
+	}
+
+	public List<String> getNames() {
+		return names;
+	}
+	
+}

@@ -1,0 +1,11 @@
+package cn.tedu.spring;
+
+public class Student {
+
+	public Student() {
+		super();
+		System.out.println("创建Student对象");
+	}
+
+	
+}

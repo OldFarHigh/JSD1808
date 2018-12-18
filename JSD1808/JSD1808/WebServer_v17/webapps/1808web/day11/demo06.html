@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>事件冒泡</title>
+<script type="text/javascript">
+	function myfn(){
+
+		var obj = event.target || event.srcElement;
+		if(obj.nodeName == "DIV"){
+			alert("点击了div");
+		}else if(obj.nodeName == "P"){
+			alert("点击了p");
+		}else{
+			alert("点击了按钮");
+		}
+	}
+</script>
+<style type="text/css">
+	div,p{
+		border:1px solid red;
+	}
+</style>
+</head>
+<body>
+	<div onclick="myfn()">
+		<p >
+			<input type="button" value="按钮"  >
+		</p> 
+	</div>
+</body>
+</html>

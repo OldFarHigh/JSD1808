@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>二级联动</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+   var arr =[["许昌","鹤壁","洛阳"],["济南","青岛","济宁"],["唐山","石家庄","秦皇岛"]];
+	$(function(){
+		//给第一个select添加点击事件
+		$("select:first").change(function(){
+			$("select:last").html("<option>请选择</option>");//清空第二个select的内容
+			var citys = arr[this.value];//获取选中省份的城市数组
+			for(var i=0;i<citys.length;i++){
+				var opt = $("<option></option>");
+				opt.text(citys[i]);
+				$("select:last").append(opt);
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<select>
+		<option>请选择：</option>
+		<option value="0">河南</option>
+		<option value="1">山东</option>
+		<option value="2">河北</option>
+	</select>
+	<select>
+		<option>请选择</option>
+	</select>
+</body>
+</html>

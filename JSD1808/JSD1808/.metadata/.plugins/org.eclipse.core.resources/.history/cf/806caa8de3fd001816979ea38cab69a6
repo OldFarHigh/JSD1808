@@ -1,0 +1,5 @@
+package bass.annotation;
+
+public @interface RequestMapping {
+	
+}

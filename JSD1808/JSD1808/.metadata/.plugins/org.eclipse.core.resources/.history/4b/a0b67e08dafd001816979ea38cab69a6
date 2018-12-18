@@ -1,0 +1,19 @@
+package reflect;
+
+public class B {
+	//缺省值为value
+	@Test("balabala")
+	public void  m1() {
+		System.out.println("B's m1()");
+	}
+	
+	public void m2() {
+		System.out.println("B's m2()");
+	}
+	
+	@Test("bilibili")
+	public void hello(){
+		System.out.println("B's hello()");
+	}
+	
+}

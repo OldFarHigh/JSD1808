@@ -1,0 +1,47 @@
+package tag;
+
+import java.io.IOException;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.PageContext;
+import javax.servlet.jsp.tagext.SimpleTagSupport;
+/**
+ * 标签类：
+ * 	a.继承SimpleTagSupport类
+ * @author OldFarHigh
+ *
+ */
+public class HelloTag extends SimpleTagSupport{
+	private String msg;
+	private int qty;
+	
+	
+	public HelloTag() {
+		System.out.println("HelloTag's Constructor...");
+	}
+
+	public void setMsg(String msg) {
+		System.out.println("HelloTag's setMsg...");
+		this.msg = msg;
+	}
+
+	public void setQty(int qty) {
+		System.out.println("HelloTag's setQty...");
+		this.qty = qty;
+	}
+
+	@Override
+	public void doTag() throws JspException, IOException {
+		System.out.println("HelloTag's doTag...");
+		/*
+		 * 通过继承自SimplTagSupport类的方法来获得pageContext。
+		 * 该对象提供了获得其他所有隐含对象的方法
+		 */
+		PageContext pctx = (PageContext)getJspContext();
+		JspWriter out = pctx.getOut();
+		for(int i=0;i<qty;i++){
+			out.println(msg+"<br/>");
+	}
+	}
+}

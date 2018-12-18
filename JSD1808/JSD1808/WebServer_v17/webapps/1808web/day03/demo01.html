@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>如何在html页面中引入CSS</title>
+<!--第二种引入方式：内部样式 好处：可以本页面复用
+											弊端：不能多页面复用 -->
+<style type="text/css">
+	/*通过选择器找到对应的标签（元素）*/
+	div{
+		background-color: green;
+	}
+	span{
+		color:blue;
+		border:1px solid red;
+	}
+</style>
+<!--第三种引入方式：外部样式  好处:多页面复用-->
+<!-- rel关系  -->
+<link rel="stylesheet" href="first.css">
+</head>
+<body>
+	<!--什么是css？
+	Cascading层叠 Style样式 Sheet表 层叠样式表，CSS用于美化页面，使用CSS可以把样式代码和html分离 -->
+	<!--第一种引入方式：内联样式 弊端：不能多标签复用 -->
+	<div style="color:red;border:1px solid blue">我是一个粉刷匠</div>
+	<div style="color:red;border:1px solid blue">我也是一个粉刷匠</div>
+	<span >粉刷本领强</span>
+	<span >粉刷本领也强</span>
+</body>
+</html>

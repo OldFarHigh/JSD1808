@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo07</title>
+<script type="text/javascript">
+	function checkfn(){
+		//准备正则对象
+		var reg = /^\w{6,10}$/;
+		if(reg.test(i1.value)){
+			//格式正确 字体为绿色 修改s1的class的值为ok
+			s1	.className ="ok";
+		}else{
+			//格式错误 字体为红色 修改s1的class的值为err
+			s1.className = "err";
+		}
+		if(reg.test(i2.value)){
+			//格式正确 字体为绿色 修改s2的class的值为ok
+			s2	.className ="ok";
+		}else{
+			//格式错误 字体为红色 修改s2的class的值为err
+			s2.className = "err";
+		}
+	}
+	function usernamefn(){
+		//准备正则对象
+		var reg = /^\w{6,10}$/;
+		if(reg.test(i1.value)){
+			//格式正确 字体为绿色 修改s1的class的值为ok
+			s1	.className ="ok";
+		}else{
+			//格式错误 字体为红色 修改s1的class的值为err
+			s1.className = "err";
+		}
+	}
+	function passwordfn(){
+		var reg = /^\w{6,10}$/;
+		if(reg.test(i2.value)){
+			//格式正确 字体为绿色 修改s2的class的值为ok
+			s2.className ="ok";
+		}else{
+			//格式错误 字体为红色 修改s2的class的值为err
+			s2.className = "err";
+		}
+	}
+</script>
+<style type="text/css">
+	.ok{
+		color:green;
+	}
+	.err{
+		color:red;
+	}
+</style>
+</head>
+<body>
+	username:<input type="text" id="i1" onblur="usernamefn()"><span id="s1">由6-10位数字、字母、下划线组成</span><br>
+	password:<input type="text" id="i2" onblur="passwordfn()"><span id="s2">由6-10位数字、字母、下划线组成</span><br>
+				<input type="button" value="check" onclick="checkfn()">
+</body>
+</html>

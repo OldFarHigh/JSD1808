@@ -1,0 +1,12 @@
+package reflect;
+/**
+ * 元注解，用来告诉jvm虚拟机保留注解到什么时候
+ */
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Test {
+	
+	
+}

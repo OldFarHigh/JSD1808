@@ -1,0 +1,16 @@
+package io;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+/**
+ * 文件流读取数据
+ * @author OldFarHigh
+ *
+ */
+public class Demo02_FileIntputStringDemo {
+	public static void main(String[] args) throws IOException {
+		FileInputStream fis =  new FileInputStream("fos.txt");
+		
+	}
+}

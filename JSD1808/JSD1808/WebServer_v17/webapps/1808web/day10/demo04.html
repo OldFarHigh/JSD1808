@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo04</title>
+<script type="text/javascript">
+/*页面加载完成后获取所有的class值为c1的元素*/
+	onload = function(){
+		var arr = document.getElementsByClassName("c1");
+	
+	//每隔两秒获取arr里面的一个元素 修改字体颜色
+	var i = 0;
+	var timeId=setInterval(function(){
+		var x  = arr[i++];
+		x.style.color = "red";	
+		if(i==3){
+			clearInterval(timeId);
+		}
+	},2000);
+}
+</script>
+</head>
+<body>
+
+	<div>div1</div>
+	<div class="c1">div2</div>
+	<div>div3</div>
+	<span>span1</span>
+	<span class="c1">span2</span>
+	<span>span3</span>
+	<h3 class="c1">lalalala</h3>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>好友分组</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("ul>li>ul").hide();
+		//给分组名称的li 添加点击事件
+		$("body>ul>li").click(function(){
+			//$(this)代表点击的li children()得到元素的子元素
+			$(this).children().toggle();
+			//得到其他两个兄弟元素li的孩子ul隐藏
+			$(this).siblings().children().hide();
+		})
+	})
+	
+</script>
+</head>
+<body>
+	<ul>
+		<li >同学
+			<ul >
+				<li>张学友</li>
+				<li>刘德华</li>
+				<li>黎明</li>
+				<li>赵四儿</li>
+			</ul>
+		</li>
+		<li >同事
+			<ul >
+				<li>马云</li>
+				<li>马化腾</li>
+				<li>李彦宏</li>
+				<li>韩少云</li>
+			</ul>
+		</li>	
+		<li >亲戚
+			<ul >
+				<li>习大大</li>
+				<li>彭妈妈</li>
+				<li>老干妈</li>
+				<li>凤姐</li>
+			</ul>
+		</li>			
+	</ul>
+</body>
+</html>

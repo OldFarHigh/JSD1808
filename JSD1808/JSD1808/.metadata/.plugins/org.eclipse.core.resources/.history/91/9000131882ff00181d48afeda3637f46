@@ -1,0 +1,10 @@
+package cn.tedu.spring;
+
+public class UserDao {
+	
+	//模拟：访问数据库的用户名
+	String username;
+	//模拟：访问数据库的密码
+	String password;
+	
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo06</title>
+<script type="text/javascript">
+	function checkfn(){
+		//创建正则对象
+		var reg = new RegExp(i2.value);
+		//判断用户输入的内容是否符合规则
+		if(reg.test(i1.value)){
+			
+			alert("OK");
+		}else{
+			alert("NO");
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="i1" placeholder="CONTENT">
+	<input type="text" id="i2" placeholder="RegExp">
+	<input type="button" value="check"  onclick="checkfn()">
+</body>
+</html>

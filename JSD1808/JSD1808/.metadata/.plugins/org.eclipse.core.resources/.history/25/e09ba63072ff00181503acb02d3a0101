@@ -1,0 +1,9 @@
+package cn.tedu.spring;
+
+public class SpringTest2 {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

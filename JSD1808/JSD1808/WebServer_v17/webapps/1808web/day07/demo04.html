@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo04</title>
+<script type="text/javascript">
+	function myfn(){
+		var inp = document.getElementById("myinput");	/*获取文本框的内容  */
+		 	if(isNaN(inp.value)){
+				inp.value="输入错误";
+			}else{ 
+			inp.value=inp.value*inp.value;
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text"   id="myinput">
+	<input type="button" value="我是按钮" onclick="myfn()">
+	<div id="mydiv"></div>
+</body>
+</html>

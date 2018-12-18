@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>定位方式</title>
+<style type="text/css">
+	div{
+		width:100px;
+		height:100px;
+		border:1px solid red;
+	}
+	#d2{
+		/* position:relative; *//*相对定位*/
+		top:20px;
+		left:20px;
+	}
+	div:hover{
+		position:relative;
+		top:10px;
+		left:10px;
+	}
+</style>
+</head>
+<body>
+	<!--文档流定位(静态定位）默认定位方式：显示的元素从上到下，从左向右排列，通过外边距控制位置
+	格式：position:static-->
+	<!--相对定位 元素不脱离文档流，通过top/left/right/bottom控制元素位置的偏移，偏移值相对于元素的初始位置 
+	应用场景：当元素需要从当前位置做位置偏移时，仍占着原来的位置 -->
+	<div>div1</div>
+	<div id="d2">div2</div>
+	<div>div3</div>
+	<!--绝对定位  -->
+	<!--固定定位  -->
+	<!--浮动定位  -->
+</body>
+</html>

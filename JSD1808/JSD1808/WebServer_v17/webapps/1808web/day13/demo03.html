@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>员工表单</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//给按钮绑定事件
+		$("input:last").click(function(){
+			//创建td并设置文本内容
+			 var nametd = $("<td></td>");
+			 var agetd = $("<td></td>");
+			 var saltd = $("<td></td>");
+			 var deltd = $("<td></td>");
+			 //创建按钮
+			 var delbtn = $("<input type='button' value='删除'>");
+			 delbtn.click(function(){
+				 //通过按纽得到按钮他爸td，再得到他爷爷tr 然后删除
+				 $(this).parent().parent().remove();
+			 });
+			 //按钮装进td
+			 deltd.append(delbtn);
+			nametd.text($("input:eq(0)").val());//获取第一个input的内容并设置到age
+			agetd.text($("input:eq(1)").val());
+			saltd.text($("input:eq(2)").val());
+			//创建tr并且把td装进去
+			var tr =$("<tr></tr>");
+			tr.append(nametd);
+			tr.append(agetd);
+			tr.append(saltd);
+			tr.append(deltd);
+			//把tr装进table
+			$("table").append(tr);
+		})
+	})
+</script>
+</head>
+<body>
+	<input type="text" placeholder="员工姓名">
+	<input type="text" placeholder="员工年龄">
+	<input type="text" placeholder="员工工资">
+	<input type="button" value="添加">
+	<hr>
+	<table>
+		<caption>员工表</caption>
+		<tr>
+			<th>姓名</th><th>年龄</th><th>工资</th><th>操作</th>
+		</tr>
+	</table>
+</body>
+</html>

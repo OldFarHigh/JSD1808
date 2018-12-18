@@ -1,0 +1,54 @@
+package cn.tedu.spring;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+/**
+ * 因为names属性的类型是list类型的。需要使用<List>及其子集的<value>属性
+ * @author OldFarHigh
+ *
+ */
+public class SampleBean {
+	
+	public List<String> names;
+	public Set<String> cities;
+	//username:Jack ;password:1234 from:NanJing
+	public Map<String,String> session;
+	//值为db.properties配置的内容
+	public Properties dbConfig; 
+	
+
+	//----以下是set/get方法
+	public Properties getDbConfig() {
+		return dbConfig;
+	}
+
+	public void setDbConfig(Properties dbConfig) {
+		this.dbConfig = dbConfig;
+	}
+	public Map<String, String> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, String> session) {
+		this.session = session;
+	}
+
+	public Set<String> getCities() {
+		return cities;
+	}
+
+	public void setCities(Set<String> cities) {
+		this.cities = cities;
+	}
+
+	public void setNames(List<String> names) {
+		this.names = names;
+	}
+
+	public List<String> getNames() {
+		return names;
+	}
+	
+}

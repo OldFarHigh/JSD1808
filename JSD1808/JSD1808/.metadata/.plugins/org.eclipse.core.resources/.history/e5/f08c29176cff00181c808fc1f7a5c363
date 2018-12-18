@@ -1,0 +1,8 @@
+package cn.tedu.spring;
+
+public class CarFactory {
+
+	public Car makeCar() {
+		
+	}
+}

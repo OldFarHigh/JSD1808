@@ -1,0 +1,13 @@
+package cn.tedu.spring;
+
+public class SpringTest2 {
+
+	public static void main(String[] args) {
+		//1、加载Spring配置文件，获取Spring容器
+		//2、通过Spring获取对象
+		//3、执行测试
+		//4、释放资源
+		
+	}
+
+}

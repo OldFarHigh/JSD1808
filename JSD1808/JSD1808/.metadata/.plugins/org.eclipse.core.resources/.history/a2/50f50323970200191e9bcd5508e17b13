@@ -1,0 +1,14 @@
+package cn.tedu.spring;
+/**
+ * 
+ * @author OldFarHigh
+ *
+ */
+@Repostory
+public class UserDao {
+
+	public UserDao() {
+		System.out.println("已经加载Spring配置文件！");
+	}
+	
+}

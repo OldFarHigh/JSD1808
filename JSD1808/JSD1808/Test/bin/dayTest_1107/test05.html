@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test05</title>
+<script type="text/javascript">
+/*第一种创建正则对象的方式  */
+	//创建一个以a开头的正则,i忽略大小写
+	var reg = /^a/i;
+	//创建一个以m结尾的正则
+	reg = /m$/;
+	//创建一个包含两位数的正则
+	reg = /\d{2}/;
+	//创建一个以三位数字开头的正则
+	reg = /^\d{3}/;
+	//创建一个以y开头以m结尾中间有5位数字的正则；
+	reg = /^y\d{5}m$/;
+	//创建一个由3-5位数字组成的正则；
+	reg =/^\d{3,5}$/;
+	//创建一个6-10位数字字母下划线的正则；
+	reg = /^\w{6,10}$/;
+	/*创建正则表达式的第二种方式 new RegExp(规则,?模式) */
+	var reg = new RegExp("^\\d{5}m$","i");
+	
+	var str ="you can you up no can no b b ";	
+	
+	var reg1 = new RegExp("no","g");
+	
+	alert(reg1.exec(str));
+	alert(reg1.exec(str));
+	alert(reg1.exec(str));
+	
+	var reg2 = new RegExp("^YOU","i");
+	if(reg2.test(str)){
+		alert("YES");
+	}else{
+		alert("NOT");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

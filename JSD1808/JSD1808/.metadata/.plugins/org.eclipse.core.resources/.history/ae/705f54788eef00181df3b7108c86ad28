@@ -1,0 +1,11 @@
+package cn.tedu.day02;
+/**
+ * 在表jdbcuser中插入数据
+ * 要求：
+ * 在控制台上
+ * @author soft01
+ *
+ */
+public class Test03 {
+
+}

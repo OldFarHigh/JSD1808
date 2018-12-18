@@ -1,0 +1,12 @@
+package demo;
+/**
+ * 处理器：
+ * 		负责业务逻辑的处理。
+ * 	  注：
+ * 		也可以调用其他的类来完成业务逻辑的处理。
+ * @author OldFarHigh
+ *
+ */
+public class HelloController {
+		
+}

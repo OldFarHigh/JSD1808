@@ -1,0 +1,11 @@
+package io;
+/**
+ * 
+ * @author OldFarHigh
+ *
+ */
+public class Demo02_FileIntputStringDemo {
+	public static void main(String[] args) {
+		
+	}
+}

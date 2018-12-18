@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;requrstURL&apos; in &apos;com.webserver.http.HttpRequest&apos; to &apos;requrstURI&apos;&#x0A;- Original project: &apos;WebServer_v10&apos;&#x0A;- Original element: &apos;com.webserver.http.HttpRequest.requrstURL&apos;&#x0A;- Renamed element: &apos;com.webserver.http.HttpRequest.requrstURI&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;requrstURL&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src\/main\/java&lt;com.webserver.http{HttpRequest.java[HttpRequest^requrstURL" name="requrstURI" references="true" setter="false" stamp="1540110472001" textual="false" version="1.0"/>
+</session>

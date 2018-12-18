@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo05</title>
+<script type="text/javascript">
+/*窗口点击事件  */
+	onclick = function(){
+		//alert("onclicking!");
+	}
+	
+	//获取页面元素对象的代码一定要在页面加载完成之后执行
+	//不然就会得到null
+	/*var i1 = document.getElementById("i1");
+	i1.value="abc"; */
+	
+/*页面加载完成事件*/
+	onload = function(){
+		var i1 = document.getElementById("i1");
+		i1.value="abc";
+	}
+/*页面失去焦点事件*/
+ 	onblur = function(){
+		console.log("失去焦点");
+}
+/*页面获取焦点事件*/
+	onfocus = function(){
+		console.log("获取焦点");
+} 
+
+</script>
+</head>
+<body>
+	<input type="text" id="i1">
+</body>
+</html>

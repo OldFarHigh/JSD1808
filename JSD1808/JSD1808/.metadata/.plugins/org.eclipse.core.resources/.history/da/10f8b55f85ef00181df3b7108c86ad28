@@ -1,0 +1,40 @@
+package cn.tedu.day02;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Scanner;
+
+/**
+ * 实现球队与成员的数据库存储功能
+ * 要求：
+ * 控制台输入球队与球员
+ * 在球员表保存球员，球员的球队外键指向球队表对应的球队
+ * 当输入球队存在时，不在球队表中创建球队
+ * 在球员表保存球员，球员的球队外键指向球队表对应的球队
+ * @author OldFarHigh
+ *
+ */
+public class Test12 {
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("请输入球队名称：");
+		String t_name = sc.nextLine();
+		System.out.println("请输入球员名称：");
+		String p_name = sc.nextLine();
+		Connection conn = null;
+		PreparedStatement stat = null;
+		ResultSet rs = null;
+		try {
+			conn = DBUtils_Test.getConn();
+			String sql = "";
+			stat = conn.prepareStatement(sql);
+			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBUtils_Test.close(conn, stat, rs);
+		}
+	}
+}

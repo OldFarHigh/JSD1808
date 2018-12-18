@@ -1,0 +1,11 @@
+package io;
+/**
+ * 
+ * @author soft01
+ *
+ */
+public class Demo02_FileIntputStringDemo {
+	public static void main(String[] args) {
+		
+	}
+}

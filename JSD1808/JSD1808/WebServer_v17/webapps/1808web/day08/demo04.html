@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo04</title>
+<script type="text/javascript">
+	var arr = [5,18,12,17,3,50,21];
+	//声明一个自定义排序的方法
+	/*为什么需要使用自定义排序方法，如果数组中保存的是对象类型，使用此方法可以用对象的任意属性进行排序  */
+	/* Person: age salary gender
+	
+	arr =[p1,p2,p3,p4,p5];
+	function sortfn(a,b){
+		return a.age-b.age;//年龄升序
+		return a.slary-b.salary;//工资升序
+	} */
+	
+	/* 
+	function sortfn(a,b){
+		return a-b;//升序
+	//	return b-a;//降序
+	}
+	//如果方法是作为参数传递的话不写括号
+	//方法调用时才需要写括号
+	arr.sort(sortfn); */
+	//第二种声明函数的方式：给排序方法传递一个匿名参数
+/* 	arr.sort(function(a,b){
+		return a-b;
+	}); */
+	/* 第三种声明函数的方式 :传递匿名函数*/
+	arr.sort(new Function("a","b","return a-b;"));
+	alert(arr);
+</script>
+</head>
+<body>
+</body>
+</html>

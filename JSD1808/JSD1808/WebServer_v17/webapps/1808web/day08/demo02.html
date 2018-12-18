@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo02</title>
+<script type="text/javascript">
+	function addfn(){
+		var str ="<h[x]>[c]</h[x]>";
+		/*因为替换方法只能替换一个，所以需要执行两次*/
+		str = str.replace("[x]",i1.value);
+		str = str.replace("[x]",i1.value);
+		/*替换文本内容  */
+		str = str.replace("[c]",i2.value);
+		/*把替换后的内容给到div*/
+		mydiv.innerHTML += str;
+	}
+</script>
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+	<input type="text" id="i1" >
+	<input type="text" id="i2" >
+	<input type="button" value="add" onclick="addfn()" >
+	<div id="mydiv" ></div>
+</body>
+</html>

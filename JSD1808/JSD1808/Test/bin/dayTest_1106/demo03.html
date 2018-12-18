@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function myfn(color){
+		mydiv.innerHTML +="<div class='"+color+"'></div>";
+	}
+</script>
+<style type="text/css">
+	.red{
+		width:30px;
+		height:30px;
+		background-color: red;
+		margin:5px;
+	}
+	.blue{
+		width:30px;
+		height:30px;
+		background-color: blue;
+		margin:5px;
+	}
+</style>
+</head>
+<body>
+	<input type="button" value="red" onclick="myfn('red')">
+	<input type="button" value="blue" onclick="myfn('blue')">
+	<div id="mydiv"></div>
+	
+</body>
+</html>

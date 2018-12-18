@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>好友分组</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("li>ul").hide();//默认隐藏
+		$("body>ul>li").click(function(){//动态绑定点击事件
+			$(this).children().toggle();//点击的li的子元素切换隐藏显示
+			$(this).siblings().children().hide();//隐藏未点击的li的子元素
+		})
+		
+	})
+</script>
+</head>
+<body>
+	<ul>
+		<li>同学
+			<ul>
+				<li>骚太</li>
+				<li>骚昆</li>
+				<li>骚柳</li>
+				<li>骚阳</li>
+			</ul>
+		</li>
+		<li>朋友
+			<ul>
+				<li>骚小太</li>
+				<li>骚小昆</li>
+				<li>骚小柳</li>
+				<li>骚小阳</li>
+			</ul>
+		</li>
+		<li>friend
+			<ul>
+				<li>骚太</li>
+				<li>骚小昆</li>
+				<li>骚小柳</li>
+				<li>骚阳</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,21 @@
+package string;
+/**
+ * String startsWith(String  str)
+ * String endsWith(String str)
+ *判断字符串是否是以给定字符串开始或结尾的
+ * @author OldFarHigh
+ *
+ */
+public class StartsWithDemo {
+	public static void main(String[] args) {
+		String str = "thinking in java";
+		
+		boolean starts =str.startsWith("th");//true
+		boolean ends = str.endsWith("ava");//false
+		
+		System.out.println(starts);
+		System.out.println(ends);
+
+	}
+
+}

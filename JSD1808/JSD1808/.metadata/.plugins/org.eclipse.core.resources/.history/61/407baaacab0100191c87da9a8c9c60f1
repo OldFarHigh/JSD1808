@@ -1,0 +1,11 @@
+package cn.tedu.spring;
+
+//通过构造方法注入属性的值
+public class User {
+
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+		
+}

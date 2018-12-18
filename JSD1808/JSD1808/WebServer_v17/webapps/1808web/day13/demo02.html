@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>二级联动</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	var arr = [["秦皇岛","唐山","石家庄"],["太原","烟台","潍坊"],["太原","运城","大同"]];
+	$(function(){
+		//给第一个下拉选添加事件
+		$("select:first").change(function(){
+			//得到第二个下拉选并清空
+			$("select:last").html("<option>请选择</option>");
+			//通过下标找到对应的城市
+			var citys = arr [this.value];
+			//遍历
+			for(var i=0;i<citys.length;i++){
+				//创建option
+				var opt = $("<option></option");
+				//设置文本内容
+				opt.text(citys[i]);
+				//添加到第二个下拉选
+				$("select:last").append(opt);
+			}
+		})
+		
+	})
+</script>
+</head>
+<body>
+	<select>
+		<option>请选择</option>
+		<option value="0"> 河北</option>
+		<option value="1">山东</option>
+		<option value="2">山西</option>
+	</select> 
+	<select >
+		<option>请选择</option>
+	</select>
+</body>
+</html>

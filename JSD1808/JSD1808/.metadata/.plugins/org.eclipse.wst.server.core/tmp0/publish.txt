@@ -1,0 +1,3 @@
+#Tomcat publish data
+#Tue Dec 18 17:45:06 CST 2018
+org.eclipse.jst.jee.server\:SPRINGMVC-02-USER=/home/soft01/apache-tomcat-8.0.50/wtpwebapps/SPRINGMVC-02-USER

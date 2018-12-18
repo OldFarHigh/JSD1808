@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo05</title>
+<script type="text/javascript">
+	function fn1(){
+		/*获取页面中的三个元素对象  */
+		var i1 = document.getElementById("i1");
+		var i2 = document.getElementById("i2");
+		var d1= document.getElementById("d1");
+		/*把文本框中得到的字符串类型转成数值类型  */
+		var x =parseFloat(i1.value);
+		var y =parseFloat(i2.value);
+		/*  把计算结果显示到d1里面*/
+		d1.innerText=x+y;
+	}
+	function fn2(){
+		/*获取页面中的三个元素对象  */
+		var i1 = document.getElementById("i1");
+		var i2 = document.getElementById("i2");
+		var d1= document.getElementById("d1");
+		/*把文本框中得到的字符串类型转成数值类型  */
+		var x =parseFloat(i1.value);
+		var y =parseFloat(i2.value);
+		/*  把计算结果显示到d1里面*/
+		d1.innerText=x-y;
+	}
+	function fn3(){
+		/*获取页面中的三个元素对象  */
+		var i1 = document.getElementById("i1");
+		var i2 = document.getElementById("i2");
+		var d1= document.getElementById("d1");
+		/*把文本框中得到的字符串类型转成数值类型  */
+		var x =parseFloat(i1.value);
+		var y =parseFloat(i2.value);
+		/*  把计算结果显示到d1里面*/
+		d1.innerText=x*y;
+	}
+	function fn4(){
+		/*获取页面中的三个元素对象  */
+		var i1 = document.getElementById("i1");
+		var i2 = document.getElementById("i2");
+		var d1= document.getElementById("d1");
+		/*把文本框中得到的字符串类型转成数值类型  */
+		var x =parseFloat(i1.value);
+		var y =parseFloat(i2.value);
+		/*  把计算结果显示到d1里面*/
+		d1.innerText=x/y;
+	}
+	function myfn(flag){
+		/*获取页面中的三个元素对象  */
+		var i1 = document.getElementById("i1");
+		var i2 = document.getElementById("i2");
+		var d1= document.getElementById("d1");
+		/*把文本框中得到的字符串类型转成数值类型  */
+		var x =parseFloat(i1.value);
+		var y =parseFloat(i2.value);
+		/*  把计算结果显示到d1里面*/
+		switch(flag){
+			case 1:
+				d1.innerText = x+y;
+			break;
+			case 2:
+				d1.innerText = x-y;
+			break;
+			case 3:
+				d1.innerText = x*y;
+			break;
+			case 4:
+				d1.innerText = x/y;
+			break;
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="i1">
+	<input type="text" id="i2">
+	<input type= "button" value="+"  onclick="myfn(1)">
+	<input type= "button" value="-"   onclick="myfn(2)">
+	<input type= "button" value="*"  onclick="myfn(3)">
+	<input type= "button" value="/"  onclick="myfn(4)">
+	<div  id="d1"></div> 
+	
+	<h1 id="myh1"></h1>
+</body>
+</html>

@@ -1,0 +1,15 @@
+package cn.tedu.day02;
+
+import org.junit.Test;
+
+/**
+ * 对DBUtils_Test 的测试
+ * @author OldFarHigh
+ *
+ */
+public class Test01 {
+	@Test
+	public void findAll() {
+		
+	}
+}

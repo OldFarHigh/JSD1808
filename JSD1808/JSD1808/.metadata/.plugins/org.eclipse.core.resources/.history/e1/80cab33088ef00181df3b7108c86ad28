@@ -1,0 +1,18 @@
+package cn.tedu.day02;
+/**
+ *用线程模拟数据库连接池的运行
+ * @author soft01
+ *
+ */
+public class Test02 {
+	public static void main(String[] args) {
+		
+	}
+}
+//创建线程
+class DemoThread extends Thread{
+	@Override
+	public void run() {
+		super.run();
+	}
+}

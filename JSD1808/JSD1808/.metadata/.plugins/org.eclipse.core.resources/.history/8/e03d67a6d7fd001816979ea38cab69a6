@@ -1,0 +1,13 @@
+package reflect;
+/**
+ * 元注解，用来告诉jvm虚拟机保留注解到什么时候
+ * 所谓元注解，指的是由系统自带，用来解释其他注解的注解。
+ */
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Test {
+	
+	
+}

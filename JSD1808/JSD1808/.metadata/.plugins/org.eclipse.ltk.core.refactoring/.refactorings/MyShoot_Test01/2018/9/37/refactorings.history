@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;src.cn.tedu.shoot&apos; to &apos;cn.tedu.shoot&apos;&#x0A;- Original project: &apos;MyShoot_Test01&apos;&#x0A;- Original element: &apos;MyShoot_Test01/src/src.cn.tedu.shoot&apos;&#x0A;- Renamed element: &apos;MyShoot_Test01/src/cn.tedu.shoot&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;src.cn.tedu.shoot&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;src.cn.tedu.shoot" name="cn.tedu.shoot" qualified="false" references="true" stamp="1536750555733" textual="false" version="1.0"/>
+</session>

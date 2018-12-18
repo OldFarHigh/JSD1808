@@ -1,0 +1,15 @@
+package cn.tedu.spring.service;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
+
+/**
+ * 
+ * @author OldFarHigh
+ *
+ */
+@Service
+@Scope("prototype")
+public class UserService {
+
+}

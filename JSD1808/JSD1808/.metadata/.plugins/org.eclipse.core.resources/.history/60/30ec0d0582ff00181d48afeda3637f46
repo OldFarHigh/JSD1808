@@ -1,0 +1,6 @@
+package cn.tedu.spring;
+
+public class UserDao {
+	String username;
+	String password;
+}

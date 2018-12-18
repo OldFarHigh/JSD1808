@@ -1,0 +1,8 @@
+重构V4项目
+
+进行功能拆分，将实际响应客户端的工作从ClientHandler中抽离出去，
+宗旨还是让ClientHandler只控制流程，具体操作分开
+
+
+与HttpRequest的设计目的类似，我们在http包中再定义一个类：HttpResponse,
+用这个类的每一个实例表示一个服务端具体发送给客户端的响应内容。

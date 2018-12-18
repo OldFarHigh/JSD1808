@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo06</title>
+<script type="text/javascript">
+	function addfn(value){
+		
+	}
+	function evalfn(){
+		
+	}
+</script>
+<style type="text/css">
+	div{
+		width:200px;
+		margin:0 auto;
+		border: 4px solid #ccc;
+		overflow:hidden;
+	}
+	input{
+		width:45px;
+	}
+</style>
+</head>
+<body>
+	<div >
+			<p id="p"> </p>
+			<input type="button" value="C" >
+			<input type="button" value="7"  onclick="addfn(value)">
+			<input type="button" value="8"  onclick="addfn(value)">
+			<input type="button" value="9"  onclick="addfn(value)">
+			<input type="button" value="/"  onclick="addfn(value)">
+			<input type="button" value="4"  onclick="addfn(value)">
+			<input type="button" value="5"  onclick="addfn(value)">
+			<input type="button" value="6"  onclick="addfn(value)">
+			<input type="button" value="*"  onclick="addfn(value)">
+			<input type="button" value="1"  onclick="addfn(value)">
+			<input type="button" value="2"  onclick="addfn(value)">
+			<input type="button" value="3"  onclick="addfn(value)">
+			<input type="button" value="-"  onclick="addfn(value)">
+			<input type="button" value="0"  onclick="addfn(value)">
+			<input type="button" value="."  onclick="addfn(value)">
+			<input type="button" value="="  onclick="evalfn()">
+			<input type="button" value="+"  onclick="addfn(value)">
+	</div>
+</body>
+</html>

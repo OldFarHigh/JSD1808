@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;day01/src/main/java/web&apos;&#x0A;- Original project: &apos;day01-lab&apos;&#x0A;- Destination element: &apos;day01/src/main/java/web&apos;&#x0A;- Original elements:&#x0A;     date.BMIServlet.java&#x0A;     date.DateServlet.java" description="Copy compilation units" destination="=day01/src\/main\/java&lt;web" element1="/src\/main\/java&lt;date{BMIServlet.java" element2="/src\/main\/java&lt;date{DateServlet.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1543281373564" units="2" version="1.0"/>
+</session>

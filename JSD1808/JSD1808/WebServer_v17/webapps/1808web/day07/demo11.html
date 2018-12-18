@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo11</title>
+<script type="text/javascript">
+	function fn(){
+		for(var x=1;x<10;x++){
+			for(var y=1;y<=x;y++){
+				mydiv.innerHTML += "<div></div>";
+			}
+			mydiv.innerHTML +="<br>";
+		}
+	}
+</script>
+
+<style type="text/css">
+	#mydiv>div{
+		width: 30px;
+		height: 30px;
+		background-color:red;
+		display:inline-block;
+		margin:5px;
+	}
+</style>
+</head>
+<body>
+	<input type="button"  value="生成" onclick="fn()">
+	<div id="mydiv"></div>
+</body>
+</html>

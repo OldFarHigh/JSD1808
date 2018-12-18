@@ -1,0 +1,11 @@
+package io;
+/**
+ * 文件流读取数据
+ * @author OldFarHigh
+ *
+ */
+public class Demo02_FileIntputStringDemo {
+	public static void main(String[] args) {
+		
+	}
+}

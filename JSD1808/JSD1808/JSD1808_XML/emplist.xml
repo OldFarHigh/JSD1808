@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<emp id="1">
+		<name>柳骚太</name>
+		<age>10</age>
+		<gender>女</gender>
+		<salary>0.1</salary>
+	</emp>
+	<emp id="2">
+		<name>李骚灰</name>
+		<age>13</age>
+		<gender>男</gender>
+		<salary>10</salary>
+	</emp>
+	<emp id="3">
+		<name>老法海</name>
+		<age>18</age>
+		<gender>男</gender>
+		<salary>100</salary>
+	</emp>
+	<emp id="4">
+		<name>胡骚胜</name>
+		<age>15</age>
+		<gender>女</gender>
+		<salary>60</salary>
+	</emp>
+	<emp id="5">
+		<name>王骚骚</name>
+		<age>16</age>
+		<gender>女</gender>
+		<salary>3000</salary>
+	</emp>
+	<emp id="6">
+		<name>张浪浪</name>
+		<age>18</age>
+		<gender>女</gender>
+		<salary>18000</salary>
+	</emp>
+</list>

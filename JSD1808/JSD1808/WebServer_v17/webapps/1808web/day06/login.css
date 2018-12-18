@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* *************************************body样式************************* */
+	body{
+		font:12px "simhei", Arial, Helvetica, sans-serif;
+		color:#666;
+		background-color: #f5f5f5;
+		margin:0px;
+		padding:0px;
+		
+	}
+/****************************************header部分************************* */
+	header{
+	padding:20px 20px;
+	width:1000px;
+	margin:0 auto;
+	overflow: hidden;/*所有的子元素全部浮动了 识别高度为0  */
+	}
+	header img{
+		float:left;
+	}
+	header h3{
+		float:left;
+		margin:8px 0 0 15px;
+		color:#4f4d4e;
+		font-size: 24px;
+		font-weight: normal;
+	}
+/*********************************form部分***********************/
+	#form_div{	
+		width:100%;
+		height:560px;
+		background-image: url("../images/regist.png");
+	}
+	#from_panel{
+		width:253px;
+		background-color: rgba(0,0,0,0.5);
+		float:right;
+		margin:122px 122px 0 0 ;
+		padding:10px;
+		color:white;
+	}
+	#from_panel>h3{
+		font-size:18px;
+		font-weight:normal;/*去掉h3的加粗效果 */
+		margin-top: 5px;
+		border-bottom: 1px solid white;
+		padding-bottom:5px; 
+	}
+	 #from_panel a{
+		font-size:12px;
+		color: white;
+		text-decoration: none;
+		float:right;
+		margin-top:8px;
+	}
+	.field{
+		position:relative;/*做位置参考  */
+	}
+	.field>input{
+		width:233px;
+		height:37px;
+		border:0;
+		padding: 0 10px;
+		
+	}
+	.field>img{
+		position:absolute;
+		top:5px;
+		right:15px;
+	}
+	.field>p{
+		font-size:12px;
+		color:red;
+		margin: 3px 0 10px 0;
+	}
+	#auto_div>label{
+		font-size: 12px;
+	}
+	#from_panel>input{
+		color:white;
+		background-color: #0aa1ed;
+		width:253px;
+		height:37px;
+		border:0;
+		border-radius: 5px;
+		margin-top:5px;
+	}
+/* ********************sevice部分************************************ */
+	#service_div{
+			padding:50px;
+			width:1000px;
+			margin: 0 auto;
+			overflow:hidden;
+		}
+	#service_div>div{
+			float: left;
+			width:250px;
+			text-align: center;
+		}
+	#service_div>div>p{
+			margin:0;
+		}
+/*脚部  */
+	footer{
+		padding-top:30px;
+		width:1000px;
+		margin: 0 auto;
+	}
+	footer>div{
+		overflow: hidden;
+	}
+	footer>p{
+		text-align:center;
+	}
+	footer>div>div{
+		float:left;
+		width:333px;
+	}
+	#center_div>ul>li{
+		float:left;
+		width:111px;
+		text-align: center;
+	}
+	#center_div>ul>li>a{
+			font-size:14px;
+			color:black;
+	}
+	#center_div li{
+		list-style-type:none;
+	}
+	#center_div ul{
+		padding: 0;/*ul自带内边距  */
+	}
+	#center_div a{
+		text-decoration: none;
+	}
+	#center_div>ul>li>ul>li>a{
+		font-size: 12px;
+		color:#808080;
+	}
+	#center_div>ul>li>ul>li{
+		margin:15px 0;
+	}
+	#center_div>ul>li>ul>li>a:hover{
+		color:#333;
+	}
+	#right_div>div{
+		float:left;
+		width:166px;
+		text-align:center;
+	}
+	#right_div>div>p{
+		font-size: 14px;
+	}
+	#img{
+		position:relative;
+		top:15px;
+		right:40px;
+	}

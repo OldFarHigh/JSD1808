@@ -1,0 +1,26 @@
+package cn.tedu.spring.test;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import cn.tedu.spring.dao.UserDao;
+import cn.tedu.spring.service.UserService;
+
+
+public class SpringTest {
+	
+	public static void main(String[] args) {
+		
+		//1、添加spring配置文件，获取spring容器
+		AbstractApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+		//2、获取对象
+		UserDao dao = (UserDao) ac.getBean("dao");
+		UserService service = (UserService) ac.getBean("userService");
+		//3、测试输出
+		System.out.println("dao:"+dao);
+		System.out.println("service:"+service);
+		//4、释放资源
+		ac.close();
+		
+	}
+}

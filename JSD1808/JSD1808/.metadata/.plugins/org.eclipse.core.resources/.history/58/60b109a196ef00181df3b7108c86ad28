@@ -1,0 +1,10 @@
+package cn.tedu.day02;
+/**
+ * 在控制台输入查询的页数和条数
+ * 输出查询到的数据
+ * @author soft01
+ *
+ */
+public class Test09 {
+
+}

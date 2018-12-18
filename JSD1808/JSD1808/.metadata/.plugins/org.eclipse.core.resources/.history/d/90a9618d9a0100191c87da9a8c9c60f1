@@ -1,0 +1,9 @@
+package cn.tedu.spring;
+/**
+ * Model.Service
+ * @author OldFarHigh
+ *
+ */
+public class UserService {
+	
+}

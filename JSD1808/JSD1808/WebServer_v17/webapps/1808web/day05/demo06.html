@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>浮动定位</title>
+<style type="text/css">
+	body>div{
+		border:1px solid red;
+		width:300px;
+		overflow: hidden;
+	}
+	#d1{
+		width:100px;
+		height:100px;
+		background-color: red;
+		float:right;
+	}
+	#d2{
+		width:100px;
+		height:100px;
+		background-color: green;
+		/*元素的两侧不允许有浮动元素，这样就不会往上顶了*/
+		clear:both;/*both left right  */
+	}
+	#d3{
+		width:100px;
+		height:100px;
+		background-color: blue;
+	}
+</style>
+</head>
+<body>
+	<div>
+	<!--浮动文档流 元素从当前所在行向左或向右浮动，当撞到上级元素边缘或同级其他浮动元素时停止
+	如果一行显示不下会自动折行，如果折行时上面的一行有凸出的部分有可能会被卡住
+	如果元素的所有子元素全部浮动，则自动识别的高度为0，通过给元素添加overflow：hidden  
+	应用场景：当纵向排列的元素需要改成横向时，使用浮动定位-->
+		<div id="d1"></div>
+		<div id="d2"></div>
+		<div id="d3"></div>
+	</div>
+</body>
+</html>

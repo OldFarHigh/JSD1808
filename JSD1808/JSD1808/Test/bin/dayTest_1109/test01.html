@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test01</title>
+<script type="text/javascript">
+	var x = 0;
+	setInterval(function(){
+		x++;
+		var imgs = document.getElementsByTagName("img");//获取图片标签的元素
+		//alert(imgs.length);
+		var visibleIndex = x%imgs.length;
+		for(var i=0;i<imgs.length;i++){
+			var img = imgs[i];
+			if(i==visibleIndex ){
+				//显示
+				img.style.display = "block";
+			}else{
+				//隐藏
+				img.style.display = "none";
+			}
+		}
+	},1000);
+</script>
+<style type="text/css">
+	div{
+		width:400px;
+		height:400px;
+		border:1px solid pink;
+		overflow:hidden;
+	}
+	img{
+		width:400px;
+		height:400px;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<img src="../../imgs/a.jpg">
+		<img src="../../imgs/b.jpg">
+		<img src="../../imgs/c.png">
+		<img src="../../imgs/d.jpg">
+	</div>
+</body>
+</html>

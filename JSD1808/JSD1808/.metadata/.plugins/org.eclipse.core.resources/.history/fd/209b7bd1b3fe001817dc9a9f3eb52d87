@@ -1,0 +1,122 @@
+package base.web;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
+
+import base.common.Handler;
+import base.common.HandlerMapping;
+
+
+public class DispatcherServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private HandlerMapping handlerMapping;
+	
+	@Override
+	public void init() throws ServletException {
+		/*
+		 * 读取SmartMVC框架的配置文件（smartmvc.xml），然后将该配置文件中配置好的处理器实例化
+		 */
+		//通过初始化参数，读取配置文件名
+		String  fileName =  getServletConfig().getInitParameter("configLocation");
+		System.out.println("fileName:"+fileName);
+		SAXReader reader = new SAXReader();
+		InputStream in = getClass().getClassLoader().getResourceAsStream(fileName);
+		try {
+			//读取配置文件的内容，dom4j会依据xml文件的内容构造一棵对应的树。
+			Document  doc = reader.read(in);
+			//找出根节点
+			Element root = doc.getRootElement();
+			//找出根节点的所有字节点
+			List<Element> elements = root.elements();
+			List beans = new ArrayList();
+			//遍历所有字节点
+			for(Element ele : elements) {
+				//获得处理器类名
+				String className = ele.attributeValue("class");
+				//
+				System.out.println("处理器类名："+className);
+				//将处理器实例化
+				Object bean = Class.forName(className).newInstance();
+				//将处理器实例添加到集合里面，方便管理
+				beans.add(bean);
+			}
+			
+			System.out.println("处理器集合：" + beans);
+			//创建handlerMapping对象
+			handlerMapping = new HandlerMapping();
+			//process方法负责建立请求路径与处理器的对应关系。
+			handlerMapping.process(beans);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new ServletException(e);//将异常抛给容器处理
+		} 
+	}
+
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//获得请求资源路径
+		String uri = request.getRequestURI();
+		System.out.println("请求资源路径（uri）:"+uri);
+		//为了方便比较，截取请求资源路径的一部分（即这一部分路径为请求路径）
+		String contextPath  = request.getContextPath();
+		String path = uri.substring(contextPath.length());
+		System.out.println("请求路径（path）:"+path);
+		
+		//调用HandlerMapping对象的getHandler方法来获得Handler对象
+		Handler  handler = handlerMapping.getHandler(path);
+		System.out.println("handler:"+handler);
+		
+		//利用handler对象来调用处理器的方法。
+		Method mh =handler.getMh();
+		Object obj = handler.getObj();
+		try {
+			/*
+			 * 查看处理器的方法带不带参数，如果带参数，则要将参数值传递给处理器的方法。
+			 */
+			//获得处理器方法的参数类型信息
+			Class[] types = mh.getParameterTypes();
+			if() {
+				
+			}
+			//returnVal是处理器方法的返回值
+			Object returnVal = mh.invoke(obj);
+			//获得视图名
+			String viewName = returnVal.toString();
+			System.out.println("viewName:"+viewName);
+			/*
+			 * 处理视图名。
+			 * 		默认情况下，转发到"/WEB-INF/视图名.jsp"
+			 * 		如果视图名是以"redirect:"开头，则重定向
+			 */
+			if(viewName.startsWith("redirect:")) {
+				//重定向
+				String redirectPath = contextPath+"/"+viewName.substring("redirect:".length());
+				System.out.println("redirectPath:"+redirectPath);
+				response.sendRedirect(redirectPath);
+			}else {
+				//转发
+				String jspPath = "/WEB-INF/"+viewName+".jsp";
+				request.getRequestDispatcher(jspPath).forward(request, response);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new ServletException(e);
+		} 
+	}
+
+}

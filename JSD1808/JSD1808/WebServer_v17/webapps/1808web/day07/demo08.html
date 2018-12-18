@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo08</title>
+<script type="text/javascript">
+		function myfn(color){
+			var div= document.getElementById("mydiv");
+			div.innerHTML+="<div class='"+color+"'></div>";/*添加两个双引号和两个加号 把需要拼接进来的内容放进去  */
+		}
+</script>
+<style type="text/css">
+	.red{
+		width:100px ;
+		height:100px ;
+		background-color: red;
+		margin:5px;
+	}
+	.blue{
+		width:100px ;
+		height:100px ;
+		background-color: blue;
+		margin:5px;
+	}
+</style>
+</head>
+<body>
+	<input type="button" value="red" onclick="myfn('red')">
+	<input type="button" value="blue" onclick="myfn('blue')">
+	<div id="mydiv"></div>
+</body>
+</html>

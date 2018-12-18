@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo08</title>
+<script type="text/javascript">
+	var x = 0;
+	onclick = function(){
+		x +=10;
+		myimg.style.marginLeft = x+"px";
+	}
+	//开启定时器 第一个参数为方法 第二个参数为时间参数
+	setInterval(function(){
+		x+=1;
+		myimg.style.marginLeft = x+"px";
+	},100);
+		
+</script>
+</head>
+<body>
+	<img src="../imgs/2.gif"  id="myimg">
+</body>
+</html>

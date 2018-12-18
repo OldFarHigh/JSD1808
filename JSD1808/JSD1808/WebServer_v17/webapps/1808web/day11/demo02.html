@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>好友分组</title>
+<script type="text/javascript">
+	onload = function(){
+		//得到页面合纵第二级的ul
+		var uls =document.getElementsByClassName("c1");
+		//遍历ul并让其隐藏
+		for(var i=0;i<uls.length;i++){
+			uls[i].style.display = "none";
+		}
+	}
+	function myfn(li){
+		//得到点击的li里面的ul
+		var ul=li.getElementsByTagName("ul")[0];
+		//得到页面合纵第二级的ul
+		var uls =document.getElementsByClassName("c1");
+		//遍历ul并让其隐藏
+		for(var i=0;i<uls.length;i++){
+			//排除掉当前点击的ul，让其他的ul全部隐藏
+			if(ul!=uls[i]){
+				uls[i].style.display = "none";
+			}
+		}
+		//判断ul如果隐藏让其显示，如果显示则让其隐藏
+		//alert(ul.style.display);
+		if(ul.style.display=="none"){
+			//如果隐藏让其显示
+			ul.style.display = "block";
+		}else{
+			//如果显示让其隐藏
+			ul.style.display="none";
+		}
+	}
+</script>
+<!-- <style type="text/css">
+	ul>li>ul{
+		display:none;/*默认隐藏*/
+	} 
+</style>-->
+</head>
+<body>
+	<ul>
+	<!--this代表事件源li对象  -->
+		<li onclick="myfn(this)">同学
+			<ul class="c1">
+				<li>张学友</li>
+				<li>刘德华</li>
+				<li>黎明</li>
+				<li>赵四儿</li>
+			</ul>
+		</li>
+		<li onclick="myfn(this)">同事
+			<ul class="c1">
+				<li>马云</li>
+				<li>马化腾</li>
+				<li>李彦宏</li>
+				<li>韩少云</li>
+			</ul>
+		</li>	
+		<li onclick="myfn(this)">亲戚
+			<ul class="c1">
+				<li>习大大</li>
+				<li>彭妈妈</li>
+				<li>老干妈</li>
+				<li>凤姐</li>
+			</ul>
+		</li>			
+	</ul>
+</body>
+</html>

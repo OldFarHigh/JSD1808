@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>订单练习</title>
+<script type="text/javascript">
+	function allfn(){
+		//得到所有商品的多选框（input)
+		var arr = document.getElementsByName("item");
+		//获取全选事件源
+		var obj = event.target || event.srcElement;
+		//alert(arr.length);
+		//遍历每一个商品多选框
+		 for(var i=0;i<arr.length;i++){
+			//让每个商品选中状态和多选状态一致
+			arr[i].checked = obj.checked;
+		} 
+		//计算总价
+		calfn();
+	}
+	/*计算价格的方法*/
+	function calfn(){
+		//用于统计总价的变量
+		var total = 0;
+		//得到所有的商品input
+		var arr =document.getElementsByName("item");
+		//遍历每一个 
+		for(var i=0;i<arr.length;i++){
+			//获取每一个商品
+			var input = arr[i];
+			//判断商品是否被选中
+			if( input.checked){
+				total += parseFloat(input.value);
+			}
+		}
+		//显示总价
+		total_p.innerText = "总价："+total+"元";
+	}
+</script>
+</head>
+<body >
+	<h3 >订单练习</h3>
+	<input type="checkbox" name="item" id="i1" value="10" onclick="calfn()"><label for="i1" >记事本10元</label><br>
+	<input type="checkbox" name="item" id="i2" value="2000" onclick="calfn()"><label for="i2" >手机2000元</label><br>
+	<input type="checkbox" name="item" id="i3" value="2" onclick="calfn()"><label for="i3" >橡皮2元</label><br>
+	<input type="checkbox" name="item" id="i4" value="3000" onclick="calfn()"><label for="i4" >电视机3000元</label><br>
+	<hr>
+	<input type="checkbox" id="i5" onclick="allfn()"><label for="i5">全选</label>
+	<p id="total_p">总价：0元</p>
+</body>
+</html>

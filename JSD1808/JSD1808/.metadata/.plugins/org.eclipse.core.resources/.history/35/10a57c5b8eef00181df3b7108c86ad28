@@ -1,0 +1,9 @@
+package cn.tedu.day02;
+/**
+ * 在表jdbcuser中插入数据
+ * @author soft01
+ *
+ */
+public class Test03 {
+
+}

@@ -1,0 +1,7 @@
+package cn.tedu.spring;
+
+public class UserDao2 {
+	public void findUserByUsername() {
+		System.out.println("UserDao2.findUserByUsername()");
+	}
+}

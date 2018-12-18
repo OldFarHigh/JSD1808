@@ -1,0 +1,31 @@
+package demo;
+
+import javax.servlet.http.HttpServletRequest;
+
+import annotation.RequestMapping;
+
+public class LoginController {
+	
+	@RequestMapping("/toLogin.do")
+	public String toLogin(){
+		System.out.println("smartmvc-test LoginController's tologin()");
+		return "login";
+	}
+	
+	
+	
+	@RequestMapping("/login.do")
+	public String login(HttpServletRequest) {
+		System.out.println("smartmvc-test LoginController's login()");
+		
+		return "redirect:toWelcome.do"; 
+	}
+	
+	@RequestMapping("/toWelcome.do")
+	public String toWelcome() {
+		System.out.println("smartmvc-test LoginController toWelcome()");
+		
+		return "welcome";
+	}
+	
+}

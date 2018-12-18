@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo03</title>
+<script type="text/javascript">
+	function fn1(){
+		var inp = document.getElementById("myinput");/*获取文本框  */
+		inp.value="又该吃饭了!";
+	}
+	function fn2(){
+		var inp = document.getElementById("myinput");/*获取文本框  */
+		alert(inp.value);/*获取文本框的值  */
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="myinput"><br>
+	<input type="button" value="赋值" onclick="fn1()">
+	<input type="button" value="取值" onclick="fn2()">
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo05</title>
+<script type="text/javascript">
+	function genderfn(){
+		//得到所有的单选
+		var arr = document.getElementsByName("gender");
+		for(var i=0;i<arr.length;i++){
+			//遍历每一个单选控件
+			var input = arr[i];
+			//判断是否被选中
+			if(input.checked){
+				alert(input.value);
+			}
+		}
+	}
+</script>
+</head>
+<body>
+		<input type ="radio"  name="gender" value="nan">boy
+		<input type ="radio" name="gender" value="nv">girl
+		<input type="button"  value="gender" onclick="genderfn()" >
+</body>
+</html>

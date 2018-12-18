@@ -1,0 +1,40 @@
+package string;
+/**
+ * char  charAt(int index)
+ * 返回当前字符串中给定位置处对应的字符
+ * @author OldFarHigh
+ *
+ */
+public class CharAtDemo {
+
+	public static void main(String[] args) {
+		//
+		String str = "thinking in java";
+		
+		char c = str.charAt(10);
+		System.out.println(c);
+	/*
+	 * 判断回文
+	 * 上海自来水来自海上
+	 */
+	String line = "上海自来水来自海上";
+	for (int i = 0; i < line.length()/2; i++) {//遍历应比较次数的字符
+		char c1 = line.charAt(i);//提取第一个字符
+		char c2 = line.charAt(line.length()-1-i);//提取第二个字符
+		/*
+		if (c1!=c2) {//如果字符不相等
+			System.out.print("不");//不是回文
+			break;
+		}
+	}
+	System.out.println("是回文!");//是回文
+	}
+	*/
+		if(c1!=c2) {
+			System.out.println("不是回文");
+			return;
+		}
+		System.out.println("是回文");
+	}
+	}
+

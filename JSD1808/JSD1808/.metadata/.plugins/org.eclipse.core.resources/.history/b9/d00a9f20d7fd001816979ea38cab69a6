@@ -1,0 +1,11 @@
+package reflect;
+/**
+ * 
+ */
+import java.lang.annotation.Retention;
+
+@Retention
+public @interface Test {
+	
+	
+}

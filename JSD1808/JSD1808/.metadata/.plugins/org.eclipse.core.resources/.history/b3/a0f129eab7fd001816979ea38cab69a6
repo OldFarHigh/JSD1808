@@ -1,0 +1,194 @@
+package web;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import dao.UserDAO;
+import entity.User;
+
+
+public class ActionServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");//中文解析
+		//获得请求资源路径
+		String uri =request.getRequestURI();
+		//截取请求资源路径的一部分，方便比较
+		String path = uri.substring(uri.lastIndexOf("/"),uri.lastIndexOf("."));
+		System.out.println("path:"+path);
+		//依据请求路径进行相应处理
+		if("/login".equals(path)) {
+			processLogin(request,response);
+		}else if("/list".equals(path)) {
+			processList(request,response);
+		}else if("/del".equals(path)) {
+			processDel(request,response);
+		}else if("/add".equals(path)) {
+			processAdd(request,response);
+		}else if("/toLogin".equals(path)) {
+			request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+		}
+		
+		
+	}
+	/**
+	 * 删除用户的操作
+	 * @param request
+	 * @param response
+	 * @throws IOException 
+	 * @throws ServletException 
+	 */
+	private void processDel(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		/*	
+		 *查看用户有没有登录，只有登录过的用户才能访问用户列表 
+		*/	 
+			HttpSession session = request.getSession();//获取session对象。
+			Object obj = session.getAttribute("user");//获取登录状态的对象
+			
+			if(obj==null) {
+				//没有登录，重定向到登录界面
+				response.sendRedirect("toLogin.jsp");
+				return;//退出运行
+			}
+			int id = Integer.parseInt(request.getParameter("id"));
+			UserDAO dao = new UserDAO();
+			try {
+			dao.delete(id);
+			response.sendRedirect("list.do");
+			} catch (Exception e) {
+				e.printStackTrace();
+				//将异常抛给容器
+				throw new ServletException(e);
+			}
+		
+	}
+	/**
+	 * 处理添加用户请求
+	 * @param request
+	 * @param response
+	 * @throws IOException 
+	 * @throws ServletException 
+	 */
+	private void processAdd(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		/*
+		 *查看用户有没有登录，只有登录过的用户才能访问用户列表 
+		 */
+		HttpSession session = request.getSession();//获取session对象。
+		Object obj = session.getAttribute("user");//获取登录状态的对象
+		
+		if(obj==null) {
+			//没有登录，重定向到登录界面
+			response.sendRedirect("toLogin.do");
+			return;//退出运行
+		}
+		//读取请求参数值
+		String username = request.getParameter("uname");
+		String password = request.getParameter("pwd");
+		String email = request.getParameter("email");
+		
+		System.out.println("username:"+username);
+		System.out.println("password:"+password);
+		System.out.println("email:"+email);
+		
+			//将用户信息插入到数据库
+			UserDAO dao = new UserDAO();
+			try {
+				User user = new User();
+				user.setUsername(username);
+				user.setPassword(password);
+				user.setEmail(email);
+				dao.save(user);
+				//重定向到用户列表
+				response.sendRedirect("list.do");
+			} catch (Exception e) {
+				//记日志（保留现场）
+				e.printStackTrace();
+				/*
+				 * 看异常能否恢复，如果不能够恢复
+				 * （比如，数据库服务暂停，网络中断等等，这样的异常一般称之为系统异常）
+				 * 则提示用户稍后重试。如果能够恢复，则立即恢复。
+				 */
+				//将异常抛给容器
+				throw new ServletException(e);
+			} 
+		
+	}
+
+	/**
+	 * 处理用户列表请求
+	 * @param request
+	 * @param response
+	 * @throws IOException
+	 * @throws ServletException 
+	 */
+	private void processList(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		/*
+		 *查看用户有没有登录，只有登录过的用户才能访问用户列表 
+		 */
+		HttpSession session = request.getSession();//获取session对象。
+		Object obj = session.getAttribute("user");//获取登录状态的对象
+		if(obj==null) {
+			//没有登录，重定向到登录界面
+			response.sendRedirect("toLogin.do");
+			return;//退出运行
+		}
+		//step1：有DAO对象查询出所有用户信息
+		UserDAO dao = new UserDAO();
+		try {
+			List<User> users = dao.findAll();
+			//绑定数据到请求对象上
+			request.setAttribute("users", users);
+			//获得转发器
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/listUser.jsp");
+			//转发
+			rd.forward(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+			//将异常抛给容器
+			throw new ServletException(e);
+		} 
+	}
+	/**
+	 * 处理用户登录请求
+	 * @param request
+	 * @param response
+	 * @throws IOException
+	 * @throws ServletException 
+	 */
+	private void processLogin(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		//获取输入的数据，读取用户名和密码
+		String username = request.getParameter("username");
+		String password = request.getParameter("pwd");
+		System.out.println("username:"+username);
+		System.out.println("password:"+password);
+		//和数据库数据匹配
+		UserDAO dao = new UserDAO();
+		try {
+			User user = dao.findUsername(username);
+			if(user!=null&&user.getPassword().equals(password)) {
+				//有匹配条件的记录，登录成功
+				HttpSession session =request.getSession();//获取session
+				session.setAttribute("user", user);//绑定对象数据
+				
+				response.sendRedirect("list.do");//重定向到list页面
+			}else {
+				//登录失败
+				request.setAttribute("login_failed", "用户名或密码错误");//绑定转发属性
+				request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);//转发到login.jsp处理请求
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			//将异常抛给容器
+			throw new ServletException(e);
+		}
+	}
+
+}

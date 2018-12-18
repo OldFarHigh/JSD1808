@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo06</title>
+<script type="text/javascript">
+	function addfn(value){
+			if(vaule == "C"){
+				p1.innerText = "";
+			}else if(value=="="){
+				pi.innerText = eval(i1.value);
+			}else{
+				p1.innnerText += value
+			}
+	}
+</script>
+<style type="text/css">
+	div{
+		width:200px;
+		margin:0 auto;
+		border: 4px solid #ccc;
+		overflow:hidden;
+	}
+	input{
+		
+	}
+</style>
+</head>
+<body>
+	<div >
+			<p id="p"> </p>
+			<input type="button" value="C" onclick="addfn('C')">
+			<input type="button" value="7"  onclick="addfn('7')">
+			<input type="button" value="8"  onclick="addfn('8')">
+			<input type="button" value="9"  onclick="addfn('9')">
+			<input type="button" value="/"  onclick="addfn('/')">
+			<input type="button" value="4"  onclick="addfn('4')">
+			<input type="button" value="5"  onclick="addfn('5')">
+			<input type="button" value="6"  onclick="addfn('6')">
+			<input type="button" value="*"  onclick="addfn('*')">
+			<input type="button" value="1"  onclick="addfn('1')">
+			<input type="button" value="2"  onclick="addfn('2')">
+			<input type="button" value="3"  onclick="addfn('3')">
+			<input type="button" value="-"  onclick="addfn('-')">
+			<input type="button" value="0"  onclick="addfn('0')">
+			<input type="button" value="."  onclick="addfn('.')">
+			<input type="button" value="="  onclick="addfn('=')">
+			<input type="button" value="+"  onclick="addfn('+')">
+	</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo03</title>
+<script type="text/javascript">
+	setInterval(function(){
+		var d = new Date();
+		myh1.innerText = d.toLocaleTimeString();
+	},1000);
+	function myfn(){
+		//得到秒数+分钟*60+小时*3600
+		var seconds = parseInt(i3.value)+parseInt(i2.value)*60+parseInt(i1.value)*3600;
+		//开启倒计时的定时器
+		var timeId = setInterval(function(){
+			seconds --;
+			//得到小时
+			var hours = parseInt(seconds/3600);
+			i1.value = hours;
+			//得到分钟  seconds%3600得到抛去小时剩余的秒数
+			var minutes = parseInt((seconds%3600)/60);
+			i2.value = minutes;
+			//得到秒数
+			i3.value = seconds%60;
+			//如果事件到则停止定时器
+			if(seconds == 0){
+				clearInterval(timeId);
+				alert("Time is out");
+			}
+		},1000);
+	}
+	/*只会执行一次*/
+	setTimeout(function(){
+		alert("准备团战！");
+	},3000);
+
+</script>
+</head>
+<body>
+		<h1 id="myh1"></h1>
+		<input type="text" placeholder="Hours" id="i1">
+		<input type="text" placeholder="Minutes" id="i2">
+		<input type="text" placeholder="Seconds" id="i3"><br>
+		<input type="button" value="Start" onclick="myfn()">
+</body>
+</html>

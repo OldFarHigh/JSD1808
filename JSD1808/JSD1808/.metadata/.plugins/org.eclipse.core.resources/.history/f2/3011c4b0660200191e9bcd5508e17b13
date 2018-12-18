@@ -1,0 +1,10 @@
+package cn.tedu.spring.dao;
+/**
+ * 组件类，实体类
+ * @author OldFarHigh
+ *
+ */
+public class UserDao {
+	
+	
+}

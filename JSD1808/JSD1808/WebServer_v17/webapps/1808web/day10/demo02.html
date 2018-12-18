@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>淘宝轮播图</title>
+<script type="text/javascript">
+/*加载完成事件*/
+	onload = function(){
+		var imgs = document.getElementsByTagName("img");
+		//alert(imgs.length);
+		//遍历图片
+		for(var i=0;i<imgs.length;i++){
+			var img = imgs[i];
+			//修改图片的位置
+			img.style.top="0";
+			img.style.left=i*200+"px";
+		}
+	}
+	//开启定时器每隔一段时间移动一张图片
+	 var timeId = setInterval(movefn,3010)
+/*移动一张图片的方法*/
+	function movefn(){
+		//开启移动图片的定时器
+		var moveId = setInterval(function(){
+			//得到每一张图片并且遍历每一张图片
+			var imgs = document.getElementsByTagName("img");
+			for(var i=0;i<imgs.length;i++){
+				//得到每一张图片
+				var img = imgs[i];
+				//移动图片
+				//先得到原来的位置
+				var oldLeft =parseFloat(img.style.left);
+				oldLeft -=2;
+				//如果图片移出页面 则把第一张图片放在最后面
+				if(oldLeft<=-200){
+					oldLeft = 400;
+					//让定时器停止
+					clearInterval(moveId);
+				}
+				img.style.left =oldLeft+"px";
+			}
+		},10);
+	}
+
+	function stop(){
+		//定时器停止
+		clearInterval(timeId);
+	}
+	function start(){
+		//每次开启新的定时器时，把上一个定时器停止，避免出现连续开启多个定时器
+		clearInterval(timeId);
+		//定时器开始
+		
+		timeId = setInterval(movefn,3000);
+	}
+	//页面失去焦点
+	onblur =stop;
+	//页面获得焦点
+	onfocus =start;
+</script>
+<style type="text/css">
+	div{
+		position:relative;
+		width:200px;
+		height:150px;
+		border:1px solid red;
+		overflow:hidden;
+	}
+	img{
+		width:200px;
+		height:150px;
+		position:absolute;
+	}
+</style>
+</head>
+<body>
+	<div onmouseover="stop()" onmouseout="start()">
+		<img src = "../imgs/a.jpg">
+		<img src = "../imgs/b.jpg">
+		<img src = "../imgs/c.png">
+		<img src = "../imgs/f.jpg">
+	</div>
+</body>
+</html>

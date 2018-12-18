@@ -1,0 +1,3 @@
+#Tomcat publish data
+#Thu Nov 29 14:35:54 CST 2018
+org.eclipse.jst.jee.server\:day04=/home/soft01/apache-tomcat-7.0.67/wtpwebapps/day04

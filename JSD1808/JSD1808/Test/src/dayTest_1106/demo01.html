@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo</title>
+<script type="text/javascript">
+	function fn(num){
+		for(var a=0;a<num;a++){
+			for(var b=0;b<=a;b++){
+				mydiv.innerHTML += "<div></div>";
+			}
+			mydiv.innerHTML += "<br>";
+		}
+	}
+</script>
+<style type="text/css">
+	#mydiv>div{
+		width:30px;
+		height:30px;
+		background-color: red;
+		display:inline-block;
+		margin:5px;
+	}
+</style>
+</head>
+<body>
+	<input type="button" value="add" onclick="fn(20)">
+	<div id="mydiv"></div>
+</body>
+</html>

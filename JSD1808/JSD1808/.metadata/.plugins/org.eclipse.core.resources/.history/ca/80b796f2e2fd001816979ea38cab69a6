@@ -1,0 +1,9 @@
+package demo;
+/**
+ * 处理器
+ * @author OldFarHigh
+ *
+ */
+public class HelloController {
+	
+}

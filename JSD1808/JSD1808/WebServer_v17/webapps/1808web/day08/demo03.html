@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function splitfn(){
+	  /*通过第二个文本框的内容取拆分第一个文本框的内容  */
+	  var arr = (i1.value).split(i2.value);
+	  //alert(arr);
+	  /* 遍历数组 */
+	  for(var i=0;i<arr.length;i++){
+		  /*准备li的字符串  */
+		  str = "<li>[c]</li>";
+		  /*把遍历的内容替换进去  */
+		  str = str.replace("[c]",arr[i]);
+		  /*把替换后的li放到ul里面  */
+		  myul.innerHTML += str;
+	  }
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="i1" placeholder="CONTENT">
+	<input type="text" id="i2" placeholder="split">
+	<input type="button" value="split" onclick="splitfn()">
+	<ul id="myul"></ul>
+</body>
+</html>

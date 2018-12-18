@@ -1,0 +1,18 @@
+package reflect;
+
+import java.lang.reflect.Method;
+
+public class TestCase2 {
+	
+	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		
+		Class clazz = Class.forName("reflect.B");//动态加载B类
+		Object obj = clazz.newInstance();
+		Method[] method = clazz.getDeclaredMethods();
+		for() {
+			
+		}
+		
+	}
+	
+}	

@@ -1,0 +1,17 @@
+package day_06;
+
+import java.util.Arrays;
+
+//数组复制的演示
+public class ArraryCopyDemo {
+
+	public static void main(String[] args) {
+		int[] arr = new int[] {10,20,30,40,50};
+		Arrays.sort(arr);
+		for (int i = 0; i < arr.length; i++) {
+
+			System.out.print(arr[i]+"\t");
+		}
+	}
+
+}

@@ -1,0 +1,14 @@
+package cn.tedu.spring;
+/**
+ * Model.Service
+ * @author OldFarHigh
+ *
+ */
+public class UserService {
+	//模拟：注册
+	public void reg() {
+		System.out.println("UserService.reg()");
+	}
+	//模拟：登录
+	
+}

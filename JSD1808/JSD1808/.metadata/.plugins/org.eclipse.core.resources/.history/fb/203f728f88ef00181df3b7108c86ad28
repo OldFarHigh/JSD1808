@@ -1,0 +1,31 @@
+package cn.tedu.day02;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+/**
+ *用线程模拟数据库连接池的运行
+ * @author soft01
+ *
+ */
+public class Test02 {
+	public static void main(String[] args) {
+		
+	}
+}
+//创建线程
+class DemoThread extends Thread{
+	@Override
+	public void run() {
+		super.run();
+		try {
+			Connection conn = DBUtils_Test.getConn();
+			System.out.println("获得连接");
+			Thread.sleep(5000);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

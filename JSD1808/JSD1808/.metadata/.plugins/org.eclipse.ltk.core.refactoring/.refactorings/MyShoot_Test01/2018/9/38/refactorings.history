@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 7 elements from project &apos;MyShoot_Test01&apos;&#x0A;- Original project: &apos;MyShoot_Test01&apos;&#x0A;- Original elements:&#x0A;     cn.tedu.shoot.Airplane.java&#x0A;     cn.tedu.shoot.Bee.java&#x0A;     cn.tedu.shoot.BigAirplane.java&#x0A;     cn.tedu.shoot.Bullet.java&#x0A;     cn.tedu.shoot.Hero.java&#x0A;     cn.tedu.shoot.Sky.java&#x0A;     cn.tedu.shoot.World.java" description="Delete elements" element1="/src&lt;cn.tedu.shoot{BigAirplane.java" element2="/src&lt;cn.tedu.shoot{World.java" element3="/src&lt;cn.tedu.shoot{Bullet.java" element4="/src&lt;cn.tedu.shoot{Bee.java" element5="/src&lt;cn.tedu.shoot{Hero.java" element6="/src&lt;cn.tedu.shoot{Airplane.java" element7="/src&lt;cn.tedu.shoot{Sky.java" elements="7" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1537356644401" subPackages="false" version="1.0"/>
+</session>

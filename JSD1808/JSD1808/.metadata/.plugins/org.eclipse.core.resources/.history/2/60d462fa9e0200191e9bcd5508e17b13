@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server auto-publish-setting="1" auto-publish-time="1" configuration-id="/Servers2/Tomcat v8.5 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v8.5 Server at localhost" name="Tomcat v8.5 Server at localhost" runtime-id="Apache Tomcat v8.5" server-type="org.eclipse.jst.server.tomcat.85" server-type-id="org.eclipse.jst.server.tomcat.85" start-timeout="45" stop-timeout="15" testEnvironment="false" timestamp="50">
+  <list key="modules" value0="SPRING-01::org.eclipse.jst.jee.server:SPRING-01::jst.web::2.5" value1="SPRING-02::org.eclipse.jst.jee.server:SPRING-02::jst.web::2.5" value2="SPRINGMVC-01-HELLO::org.eclipse.jst.jee.server:SPRINGMVC-01-HELLO::jst.web::2.5"/>
+</server>

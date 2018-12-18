@@ -1,0 +1,15 @@
+package cn.tedu.spring;
+
+import org.springframework.stereotype.Controller;
+
+/**
+ * 
+ * @author OldFarHigh
+ *
+ */
+@Controller
+public class HelloController {
+	
+	
+	
+}

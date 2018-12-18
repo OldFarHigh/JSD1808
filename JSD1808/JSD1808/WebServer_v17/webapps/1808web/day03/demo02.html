@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>练习</title>
+<!--三个样式的优先级 
+	1、内联样式优先级最高
+	2、内部和外部优先级相等，后执行的会覆盖前执行的 -->
+<style type="text/css">
+	img{
+		border:5px solid blue;
+		width :300px;
+	}
+</style>
+<link rel="stylesheet" href="second.css">
+</head>
+<body>
+	<h1 style="border:12px solid green;background:red">这是一个标题</h1>
+	<img alt="" src="../imgs/1.jpg">
+	<ol type="A" >
+		<li>打开冰箱门</li>
+		<li>大象放进去</li>
+		<li>关闭冰箱门</li>
+	</ol>
+</body>
+</html>

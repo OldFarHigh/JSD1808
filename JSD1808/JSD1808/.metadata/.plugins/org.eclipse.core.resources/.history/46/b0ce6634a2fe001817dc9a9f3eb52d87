@@ -1,0 +1,14 @@
+package annotation;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+/**
+ * Controller组件
+ * 		负责执行具体的时去
+ * @author OldFarHigh
+ *
+ */
+@Retention(RetentionPolicy.RUNTIME)
+public @interface RequestMapping {
+	public String value();
+}

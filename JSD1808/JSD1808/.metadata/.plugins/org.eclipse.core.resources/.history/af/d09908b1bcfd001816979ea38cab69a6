@@ -1,0 +1,7 @@
+package reflact;
+
+public class A {
+	public void f1() {
+		
+	}
+}

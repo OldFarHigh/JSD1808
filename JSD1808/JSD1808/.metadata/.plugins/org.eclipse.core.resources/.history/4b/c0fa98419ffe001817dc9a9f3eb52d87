@@ -1,0 +1,7 @@
+package common;
+
+public class Handler {
+	
+	private Method mh;
+	private Object obj;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>员工表单</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("input:last").click(function(){
+			//创建四个 td
+			var nametd=$("<td></td>");
+			var agetd=$("<td></td>");
+			var saltd=$("<td></td>");
+			var deltd=$("<td></td>");
+			var delbtn = $("<input type='button' value='Delete'>");
+			delbtn.click(function(){
+				$(this).parent().parent().remove();
+			});
+			deltd.append(delbtn);
+			nametd.text($("input:eq(0)").val());
+			agetd.text($("input:eq(1)").val());
+			saltd.text($("input:eq(2)").val());
+			var tr = $("<tr></tr>");
+			tr.append(nametd);
+			tr.append(agetd);
+			tr.append(saltd);
+			tr.append(deltd);
+			$("table").append(tr);
+		})
+	})
+</script>
+</head>
+<body>
+	<input type="text" placeholder="员工姓名">
+	<input type="text" placeholder="员工年龄">
+	<input type="text" placeholder="员工工资">
+	<input type="button" value="Add">
+	<table>
+		<caption>员工表</caption>
+		<tr>
+			<th>员工姓名</th>
+			<th>员工年龄</th>
+			<th>员工工资</th>
+			<th>操作</th>
+		</tr>
+	</table>
+</body>
+</html>

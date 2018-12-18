@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test06</title>
+<script type="text/javascript">
+	function checkfn(){
+		var reg = new RegExp(i2.value,"i");
+		if(reg.test(i1.value)){
+			alert("OK")
+		}else{
+			alert("NO")
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="i1">
+	<input type="text" id="i2">
+	<input type ="button" value="check" onclick="checkfn()">
+</body>
+</html>
