@@ -26,4 +26,20 @@
 		<property name="prefix" value="/WEB-INF/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
+	
+	<!--拦截器链  1.2.3.顺序不允许颠倒 -->
+	<mvc:interceptors>
+		<!--第1个拦截器 -->
+		<mvc:interceptor>
+			<!--1.需要拦截的路径  “*”通配符只能匹配1级路径  需要多级路径，需要两个“/**” -->
+			<mvc:mapping path="/user/*"/>
+			<!--2.例外,白名单-->
+			<mvc:exclude-mapping path="/user/reg.do"/>
+			<mvc:exclude-mapping path="/user/handle_reg.do"/>  
+			<mvc:exclude-mapping path="/user/login.do"/>
+			<mvc:exclude-mapping path="/user/handle_login.do"/>
+			<!--3.拦截器类 -->
+			<bean class="cn.tedu.spring.LoginInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 </beans>

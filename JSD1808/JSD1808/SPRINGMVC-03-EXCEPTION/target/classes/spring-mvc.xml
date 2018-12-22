@@ -17,9 +17,9 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 	
 	<!--开启组件扫描  -->
-	<context:component-scan base-package="cn.tedu.spring"></context:component-scan>
+	<context:component-scan base-package="cn.tedu.spring"/>
 	
-	<!-- ViewResolver -->
+	<!-- ViewResolver 视图解析器-->
 	<!--以webapp作为基准 -->
 	<!--根据prefix + 视图名 + suffix 得到文件路径 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -27,19 +27,15 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
-	<!--拦截器链  1.2.3.顺序不允许颠倒 -->
-	<mvc:interceptors>
-		<!--第1个拦截器 -->
-		<mvc:interceptor>
-			<!--1.需要拦截的路径  “*”通配符只能匹配1级路径  需要多级路径，需要两个“/**” -->
-			<mvc:mapping path="/user/*"/>
-			<!--2.例外,白名单-->
-			<mvc:exclude-mapping path="/user/reg.do"/>
-			<mvc:exclude-mapping path="/user/handle_reg.do"/>  
-			<mvc:exclude-mapping path="/user/login.do"/>
-			<mvc:exclude-mapping path="/user/handle_login.do"/>
-			<!--3.拦截器类 -->
-			<bean class="cn.tedu.spring.LoginInterceptor"></bean>
-		</mvc:interceptor>
-	</mvc:interceptors>
+	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.NullPointerException">ex_null</prop>
+				<!-- <prop key="java.lang.ArrayIndexOutOfBoundsException">ex_array</prop> -->
+			</props>
+		</property>
+	</bean>
+	
+	<!--注解驱动  -->
+	<mvc:annotation-driven/>
 </beans>

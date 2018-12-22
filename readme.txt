@@ -1,4 +1,5 @@
 
-Hello World :wq
-:wq
+Hello World
+Git is a distributed version control system.
+Git is free software distribute under the GPL.
 
