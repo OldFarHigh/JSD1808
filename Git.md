@@ -3,14 +3,16 @@ $ git `查看安装GIT`
 The program 'git' is currently not installed. You can install it by typing:sudo apt-get install git
 sudo apt-get install git `Debian或Ubuntu Linux,完成Git的安装`
 sudo apt-get install git-core `老一点的Debian或Ubuntu Linux`
-###安装完成
+###LINUX指令
+$ mkdir binName  `创建目录`
+$ pwd        `显示当前目录`
+$ ls -ah     `查看隐藏目录`
+$ rm readme.txt `删除文件`
+###GIT指令
 $ git config --global user.name "Your Name" `你的名字`
 $ git config --global user.email "email@example.com"  `Email地址
 --globle     `对本机器上所有的git仓库进行统一的设置
 $ git init   `初始化一个参数`
-$ mkdir binName  `创建目录`
-$ pwd        `显示当前目录`
-$ ls -ah     `查看隐藏目录`
 $ git add fileName `添加文件到仓库,可以添加多次`
 $ git commit -m "说明注释"  	`看到自己每次的版本具体修改情况
 $ git status  `仓库当前的状态`
@@ -20,8 +22,34 @@ $ git log --reflog `查看所有版本`
 $ git reset --hard HEAD^  `回退到上个版本`      HEAD`表示当前版本`  HEAD`上一个版本`  HEAD^^`上上一个版本`   HEAD~100`回退到上100个版本`
 $ git reset --hard commit id `版本回退到指定版本commit id 版本`
 $ git reflog `查看命令历史`
-$ git checkout -- readme.txt `丢弃工作区的修改,让这个文件回到最近一次git commit或git add时的状态`
-$ git reset HEAD readme.txt
+$ git checkout -- readme.txt `丢弃工作区的修改,让这个文件回到最近一次git commit或git add时的状态,相当于“一键还原”`
+$ git reset HEAD readme.txt  `把暂存区的修改撤销掉（unstage），重新放回工作区`
+$ git rm readme.txt `版本库中删除文件`
+$ git remote add origin git@github.com:yourmail/learngit.git `关联远程库`  --orign`远程库默认的名字`
+$ git push -u origin master `第一次当前分支master推送到远程` 
+-u参数 	`git会将本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令`
+$ git push origin master `把本地master分支的最新修改推送至GitHub`
+$ git clone git@github.com:yourmail/gitskills.git `克隆一个本地库`
+
+###SSH警告
+The authenticity of host 'github.com (xx.xx.xx.xx)' can't be established.
+RSA key fingerprint is xx.xx.xx.xx.xx.
+Are you sure you want to continue connecting (yes/no)?
+输入yes回车即可。
+
+Git会输出一个警告，告诉你已经把GitHub的Key添加到本机的一个信任列表里了：
+
+<Warning: Permanently added 'github.com' (RSA) to the list of known hosts.>
+
+###创建SSHKey
+1、在主目录下，看有没有.ssh目录，如果有，再看看这个目录下有没有<id_rsa>和<id_rsa.pub>这两个文件，
+如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key
+<id_rsa>是私钥，不能泄露出去，<id_rsa.pub>是公钥，可以放心地告诉任何人。
+$ ssh-keygen -t rsa -C "youremail@example.com"
+第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：
+
+然后，点[“Add SSH Key”]，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
+点“Add Key”，你就应该看到已经添加的Key：
 
 ###远程端版本回退
 
