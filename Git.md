@@ -8,6 +8,7 @@ $ mkdir binName  `创建目录`
 $ pwd        `显示当前目录`
 $ ls -ah     `查看隐藏目录`
 $ rm readme.txt `删除文件`
+$ cat readme.txt `查看文件内容`
 ###GIT指令
 $ git config --global user.name "Your Name" `你的名字`
 $ git config --global user.email "email@example.com"  `Email地址
@@ -17,7 +18,7 @@ $ git add fileName `添加文件到仓库,可以添加多次`
 $ git commit -m "说明注释"  	`看到自己每次的版本具体修改情况
 $ git status  `仓库当前的状态`
 $ git diff 	  `查看difference修改内容`
-$ git log	  `查看提交历史`  $git log --pretty=oneline `可以调整显示方式,全部的id` $git log --oneline `调整显示方式 只有commit id 前7位`
+$ git log	  `查看提交历史`  $git log --pretty=oneline `可以调整显示方式,全部的id` $git log --oneline `调整显示方式 只有commit id 前7位`  q`退出显示`
 $ git log --reflog `查看所有版本`
 $ git reset --hard HEAD^  `回退到上个版本`      HEAD`表示当前版本`  HEAD`上一个版本`  HEAD^^`上上一个版本`   HEAD~100`回退到上100个版本`
 $ git reset --hard commit id `版本回退到指定版本commit id 版本`
@@ -30,11 +31,45 @@ $ git push -u origin master `第一次当前分支master推送到远程`
 -u参数 	`git会将本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令`
 $ git push origin master `把本地master分支的最新修改推送至GitHub`
 $ git clone git@github.com:yourmail/gitskills.git `克隆一个本地库`
+$ git checkout -b featurel `创建一个名为featurel新的分支`
+$ git checkout master `切换到mater分支`
+$ git marge featurel `快速合并两个分支（不存在冲突）
+$ git log --graph --pretty=oneline --abberv-commit `查看分支的合并情况`
+$ git branch -d featurel `删除feturel分支`
+$ git marge --no-ff -m"merge with no-ff" dev `合并主次两个分支，并禁用FAST forward模式` --no-ff `用普通模式合并，合并后有的历史有分支，能看出曾经做过合并`
+$ git stash `将当前工作现场储藏起来`
+$ git stash list `查看stash存储的工作现场`
+$ git stash apply stash@{0} `恢复指定的工作现场，但不删除stash内容`
+$ git stash drop stash@{0} `在stash中删除指定的存储的工作现场`
+$ git stash pop stash@{0} `恢复并删除存储在stash存储的指定的工作现场`
+$ git branch -D name `强行删除分支`
+$ git remote -v `查看远程库信息 orign远程库默认名字`
+$ git push orign dev `推送dev分支到远程库`
+
+
+###分支名
+master分支是主分支，因此要时刻与远程同步；
+
+dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
+
+bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；
+
+feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。
+
+
+
+###名词解释
+ 未被追踪的文件:指的是新建的文件或文件夹且还没加入到暂存区(新建的还没有被git add 过的)
+ 未加入到暂存区的文件:指的是已经被追踪过，但是没有加入到暂存区(已经执行过git add/commit的但是这次修改后还没有git add)
+###FAST forward
+合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
+
+如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
 
 ###SSH警告
-The authenticity of host 'github.com (xx.xx.xx.xx)' can't be established.
-RSA key fingerprint is xx.xx.xx.xx.xx.
-Are you sure you want to continue connecting (yes/no)?
+ 	The authenticity of host 'github.com (xx.xx.xx.xx)' can't be established.
+  	RSA key fingerprint is xx.xx.xx.xx.xx.
+	Are you sure you want to continue connecting (yes/no)?
 输入yes回车即可。
 
 Git会输出一个警告，告诉你已经把GitHub的Key添加到本机的一个信任列表里了：
