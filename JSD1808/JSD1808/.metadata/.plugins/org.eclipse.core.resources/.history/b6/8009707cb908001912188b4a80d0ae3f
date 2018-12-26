@@ -1,0 +1,21 @@
+package Test;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.context.support.AbstractApplicationContext;
+
+import cn.tedu.ajax.mapper.UserMapper;
+
+public class SimpleTestCase {
+	
+	private AbstractApplicationContext ac;
+	private UserMapper usermapper;
+	@Before
+	public void doBefor() {
+		
+	}
+	@Test
+	public void insert() {
+		
+	}
+}

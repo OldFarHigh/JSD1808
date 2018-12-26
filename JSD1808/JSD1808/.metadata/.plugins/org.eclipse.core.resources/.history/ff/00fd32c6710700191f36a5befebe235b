@@ -1,0 +1,6 @@
+package cn.tedu.mybatis.vo;
+
+public class ScoreVO {
+	
+	private Integer Stu_id;
+}

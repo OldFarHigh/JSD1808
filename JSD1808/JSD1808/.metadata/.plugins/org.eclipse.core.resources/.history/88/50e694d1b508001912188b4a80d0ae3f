@@ -1,0 +1,7 @@
+package cn.tedu.ajax.mapper;
+
+import java.io.Serializable;
+
+public class UserMapper implements Serializable{
+
+}

@@ -1,0 +1,41 @@
+package cn.tedu.mybatis.vo;
+
+import java.io.Serializable;
+import java.util.List;
+
+import cn.tedu.mybatis.entity.Score;
+
+public class ScoreVO implements Serializable{
+
+	private static final long serialVersionUID = 508729388581761276L;
+	
+	private Integer stuId;
+	private String name;
+	private List<Score> score;
+	
+	public Integer getStuId() {
+		return stuId;
+	}
+	public String getName() {
+		return name;
+	}
+	public List<Score> getScore() {
+		return score;
+	}
+	public void setStuId(Integer stuId) {
+		this.stuId = stuId;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setScore(List<Score> score) {
+		this.score = score;
+	}
+	@Override
+	public String toString() {
+		return "ScoreVO [stuId=" + stuId + ", name=" + name + ", score=" + score + "]";
+	}
+
+	
+	
+}

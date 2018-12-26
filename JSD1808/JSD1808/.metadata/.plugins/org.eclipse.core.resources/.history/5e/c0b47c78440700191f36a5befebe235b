@@ -1,0 +1,6 @@
+package cn.tedu.mybatis.mapper;
+
+public interface DepartmentMapper {
+	
+	Department findById(Integer id);
+}

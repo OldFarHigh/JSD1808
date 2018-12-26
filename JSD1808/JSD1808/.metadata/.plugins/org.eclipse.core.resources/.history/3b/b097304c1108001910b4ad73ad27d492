@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON</title>
+</head>
+<body>
+	<script>
+		//var user={"name":"张三","from":"北京","age":25};
+		//alert(user.name);
+		var user={"name":"张三",
+				"department":{
+				"id":9527,
+				"name":"JAVA软件研发部"
+				}};
+		alert(user.department.name);
+	</script>
+</body>
+</html>

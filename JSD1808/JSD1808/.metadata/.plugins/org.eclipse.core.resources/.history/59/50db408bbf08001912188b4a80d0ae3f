@@ -1,0 +1,30 @@
+package cn.tedu.ajax.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cn.tedu.ajax.entity.User;
+import cn.tedu.ajax.mapper.UserMapper;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private UserMapper userMapper;
+	
+	//业务方法，被Controller调用的方法
+	public Integer reg(User user) {
+		//
+	}
+	private Integer insert(User user) {
+		
+		
+		return userMapper.insert(user); 
+	}
+	
+    private	 User findByUsername(String username) {
+		
+    	
+    	return userMapper.findByUsername(username);
+	}
+}

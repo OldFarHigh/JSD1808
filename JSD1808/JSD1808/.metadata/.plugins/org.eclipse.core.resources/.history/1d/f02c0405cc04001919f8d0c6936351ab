@@ -1,0 +1,11 @@
+package cn.tedu.mybatis.entity;
+
+public class User {
+	
+	private Integer id;
+	String username;
+	String password;
+	Integer age;
+	String phone;
+	String email;
+}

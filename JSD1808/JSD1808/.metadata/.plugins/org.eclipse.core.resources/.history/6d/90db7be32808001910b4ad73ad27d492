@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录页面</title>
+</head>
+<body>
+		<h1>用户登录</h1>
+		<div>用户名：</div>
+		<div>
+			<input id="username"/>
+		</div>
+		<div>密码：</div>
+		<div>
+			<input id="password"/>
+		</div>
+		<div>
+			<input type="button" value="登录" onclick="login()"/>
+		</div>
+	<script type="text/javascript" src="jquery-1.4.2.min.js">
+	</script>
+	<script type="text/javascript">
+			function login(){
+				//调用ajax()函数发出请求，并处理响应
+				var u =$("#username").val();//获取输入框的username的值
+				var p =$("#password").val();//获取输入框的password的值  val=value
+				$.ajax({
+					"url":"user/login.do", //请求提交的地址
+					"data":"username=" +u+ "&password=" +p, //请求参数，参数格式为：`xx=xx`
+					"type":"POST", //请求类型，例如“GET”和“POST”
+					"dataType":"json",//服务器端响应的数据类型，取值可以是"text","xml","json"
+					"success":function(json){	//当服务器正确响应时：（响应码=200）如何处理，取值为函数，由该函数对结果进行处理。
+						if(json.state == 1){		//可以在函数中添加一个参数，该参数就是服务器相应的内容，如果前序将‘dataType’
+							//login success
+						}else if(json.state == 2){
+							//username error
+						}else if(json.state ==3){
+							//password error
+						}					
+					}
+								
+				});
+			}
+	</script>
+</body>
+</html>

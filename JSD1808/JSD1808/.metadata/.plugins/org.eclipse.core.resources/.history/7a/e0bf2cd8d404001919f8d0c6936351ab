@@ -1,0 +1,18 @@
+package Test;
+
+import org.apache.commons.dbcp.BasicDataSource;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class SimpleTestCase {
+
+	
+		
+	public void getConnection() {
+		
+		AbstractApplicationContext ac = new ClassPathXmlApplicationContext("spring-dao.xml");
+		BasicDataSource basicDataSource = (BasicDataSource) ac.getBean("dataSource");
+		
+		ac.close();
+	}
+}

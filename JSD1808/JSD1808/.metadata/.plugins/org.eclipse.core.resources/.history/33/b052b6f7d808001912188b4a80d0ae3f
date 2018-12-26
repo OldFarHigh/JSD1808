@@ -1,0 +1,30 @@
+package test;
+
+import java.util.Arrays;
+/**
+ * 统计一个英文大些字母组成的字符串中每个字母的数量
+ * @author OldFarHigh
+ * 'A' 65-65 counter[0]++
+ * 'B' 66-65 counter[0]++
+ * 'C' 67-65 counter[0]++
+ * 'D' 68-65 counter[0]++
+ * 'E' 69-65 counter[0]++
+ * 'F' 70-65 counter[0]++
+ * ... ...
+ */
+public class DemoTest01 {
+
+	public static void main(String[] args) {
+		//要统计的字符串
+		String str = "ASDJIKHLKHLKHFLKHLKSHLIGFHSLIHFOYHLIKGHIKSHGKH";
+		//存储统计结果的数组，一个字母对应一个位置
+		int[] counter = new int[26];
+		//遍历字符串
+		for (int i = 0; i < str.length(); i++) {
+			char c = str.charAt(i);
+			
+			counter[c-'A']++;
+		}
+		System.out.println(Arrays.toString(counter));
+	}
+}

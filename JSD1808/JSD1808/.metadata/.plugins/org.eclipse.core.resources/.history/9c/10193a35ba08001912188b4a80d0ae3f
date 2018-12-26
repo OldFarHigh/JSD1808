@@ -1,0 +1,42 @@
+package Test;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import cn.tedu.ajax.entity.User;
+import cn.tedu.ajax.mapper.UserMapper;
+
+public class SimpleTestCase {
+	
+	private AbstractApplicationContext ac;
+	private UserMapper userMapper;
+	@Before
+	public void doBefor() {
+		ac = new ClassPathXmlApplicationContext("spring-dao.xml");
+		userMapper = ac.getBean("userMapper",UserMapper.class);
+	}
+	@After
+	public void doAfter() {
+		ac.close();
+	}
+	
+	
+	@Test
+	public void insert() {
+		
+		User user = new User();
+		user.setUsername("mappertest");
+		user.setPassword("1234");
+		user.setAge(31);
+		user.setPhone("150698974");
+		user.setEmail("test@tedu.com");
+		
+		System.out.println("增加前："+user);
+		Integer rows = userMapper.insert(user);
+		System.out.println("影响的行数："+rows);
+		System.out.println("增加后："+user); 
+	}
+}

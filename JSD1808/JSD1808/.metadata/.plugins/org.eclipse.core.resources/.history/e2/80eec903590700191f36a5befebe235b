@@ -1,0 +1,21 @@
+package Test;
+
+
+
+public class ClazzMapperTestCase {
+	private AbstractApplicationContext ac;
+	
+	@Before
+	public void doBefore() {
+		ac = new ClassPathXmlApplicationContext(
+			"spring-dao.xml");
+	
+		clazzMapper = ac.getBean(
+			"clazzMapper", clazzMapper.class);
+	}
+	
+	@After
+	public void doAfter() {
+		ac.close();
+	}
+}

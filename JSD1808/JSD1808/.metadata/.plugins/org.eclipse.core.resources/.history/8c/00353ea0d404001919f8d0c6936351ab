@@ -1,0 +1,14 @@
+package Test;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class SimpleTestCase {
+
+	
+		
+	public void getConnection() {
+		
+		AbstractApplicationContext ac = new ClassPathXmlApplicationContext("spring-dao.xml")
+	}
+}

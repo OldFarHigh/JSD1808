@@ -1,0 +1,11 @@
+package lnterviewtest;
+/**
+ * 统计一个英文大些字母组成的字符串中每个字母的数量
+ * @author OldFarHigh
+ *
+ */
+public class CountEvery {
+	String test = "ASDJIKHLKHLKHFLKHLKSHLIGFHSLIHFOYHLIKGHIKSHGKH";
+	int[] counter = new int[26];
+	
+}

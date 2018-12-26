@@ -1,0 +1,100 @@
+package Test;
+
+import java.util.List;
+import java.util.Scanner;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import cn.tedu.mybatis.entity.User;
+import cn.tedu.mybatis.mapper.UserMapper;
+
+public class UserMapperTestCase {
+	
+	private AbstractApplicationContext ac;
+	private UserMapper userMapper;
+	@Before
+	public void doBefore() {
+		 ac = new ClassPathXmlApplicationContext("spring-dao.xml");
+		 userMapper = ac.getBean("userMapper",UserMapper.class);
+	}
+	@After
+	public void doAfter(){
+		ac.close();
+	}
+	
+	
+	//@Test
+	public void insert() {
+		
+		User user = new User();
+		user.setUsername("mapper");
+		user.setPassword("1234");
+		user.setAge(31);
+		user.setPhone("150698974");
+		user.setEmail("test@tedu.com");
+		
+		System.out.println("增加前："+user);
+		Integer rows = userMapper.insert(user);
+		System.out.println("影响的行数："+rows);
+		System.out.println("增加后："+user);
+		ac.close();
+	}
+	
+	//@Test
+	public void findAll() {
+
+		List<User> users = userMapper.findAll();
+		System.out.println("Begin:...");
+		for (User user : users) {
+			System.out.println(user);
+		}
+		System.out.println("End:...");
+		
+	}
+	@Test
+	public void findAllOrderedList() {
+		String orderBy = "asc";
+		List<User> users = userMapper.findAllOrderedList(orderBy);
+		System.out.println(users);
+	}
+	
+	//@Test
+	public void findByUsername() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("请输入要查询的用户名：");
+		String username = sc.nextLine();
+		User users = userMapper.findByUsername(username);
+		
+		System.out.println(users);
+		
+		sc.close();
+	}
+	
+	//@Test
+	public void getCount() {
+		Integer count = userMapper.getCount();
+		System.out.println("count:"+count);
+	}
+	
+	//@Test
+	public void del() {
+		Integer del = userMapper.del("mapper");
+		System.out.println("影响行数："+del);
+	}
+	
+	//@Test
+	public void updatePasswordByAge(){
+		Integer age = 22;
+		String password = "123456";
+		Integer rows = userMapper.updatePasswordByAge(age,password);
+		System.out.println("影响行数："+rows);
+	}
+	
+	
+	
+}

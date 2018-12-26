@@ -1,0 +1,9 @@
+package cn.tedu.mybatis.entity;
+
+public class Score {
+	
+	private Integer id;
+	private Integer stu_id;
+	private String subject;
+	private Integer score; 
+}

@@ -1,0 +1,12 @@
+package cn.tedu.ajax.mapper;
+
+import java.util.List;
+
+import cn.tedu.ajax.entity.User;
+
+public interface UserMapper {
+	
+	Integer insert(User user);
+	
+	List<User> findByUsername(String username);
+}

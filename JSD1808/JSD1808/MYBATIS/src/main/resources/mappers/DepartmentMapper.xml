@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<!-- namespace：映射的接口的全名 -->
+<mapper namespace="cn.tedu.mybatis.mapper.DepartmentMapper">
+	<!-- resultMap：指导MyBatis将查询结果封装到对象中 -->
+	<!-- id：节点的唯一标识 -->
+	<!-- type：数据类型 -->
+	<resultMap id="DepartmentVoMap" type="cn.tedu.mybatis.vo.DepartmentVO">
+		<!-- id节点：主键的配置 -->
+		<!-- column：查询结果的列名 -->
+		<!-- property：数据类型的属性名 -->
+		<id column="dep_id" property="depId" />
+		<!-- 其它结果的配置 -->
+		<result column="name" property="depName" />
+		<!-- collection：配置List集合 -->
+		<!-- ofType：集合中放的哪种类型的数据 -->
+		<collection property="users" ofType="cn.tedu.mybatis.entity.User">
+			<!-- 自此开始，property表示User中的属性名 -->
+			<id column="id" property="id" />
+			<result column="username" property="username" />
+			<result column="password" property="password" />
+			<result column="age" property="age" />
+			<result column="phone" property="phone" />
+			<result column="email" property="email" />
+			<result column="is_delete" property="isDelete" />
+		</collection>
+	</resultMap>
+	
+	<select id="findById" resultMap="DepartmentVoMap">
+		SELECT t_department.id AS dep_id, name, 
+		        t_user.id, username, password,age,phone,email, is_delete 
+		FROM 
+			t_user 
+		INNER JOIN
+			t_department 
+		ON
+		    t_user.department=t_department.id 
+		WHERE
+			t_department.id=#{id}
+	</select>
+</mapper>
+
+

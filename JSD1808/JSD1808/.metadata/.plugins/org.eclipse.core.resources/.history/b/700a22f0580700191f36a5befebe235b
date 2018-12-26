@@ -1,0 +1,24 @@
+package Test;
+
+import org.junit.After;
+import org.junit.Before;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import cn.tedu.mybatis.mapper.DepartmentMapper;
+
+public class ClazzMapperTestCase {
+	
+	@Before
+	public void doBefore() {
+		ac = new ClassPathXmlApplicationContext(
+			"spring-dao.xml");
+	
+		clazzMapper = ac.getBean(
+			"clazzMapper", clazzMapper.class);
+	}
+	
+	@After
+	public void doAfter() {
+		ac.close();
+	}
+}

@@ -1,0 +1,31 @@
+package test;
+/**
+ * 7进制解析
+ * @author OldFarHigh
+ *
+ */
+public class DemoTest03 {
+	/*
+	 * 解析7进制，如：7进制“123”，解析为：66
+	 * 注意：不能使用JavaAPI解析。
+	 */
+	public static void main(String[] args) {
+		int parseInt(String str,int base) {
+			str = "123";
+			//int n = Integer.parseInt(str,7);
+			//System.out.println(n);
+			int weight = 1;
+			int sum =0;
+			for (int i= str.length();i>=0;i--) {
+				char c = str.charAt(i);
+				int n = c- '0';
+				sum += n*weight;
+				weight *=base;
+				
+			}
+			return sum;
+		}
+		
+		
+	}
+}

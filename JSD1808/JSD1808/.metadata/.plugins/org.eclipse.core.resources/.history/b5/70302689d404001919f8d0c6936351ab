@@ -1,0 +1,10 @@
+package Test;
+
+public class SimpleTestCase {
+
+	
+		
+	public void getConnection() {
+		
+	}
+}

@@ -1,0 +1,11 @@
+package cn.tedu.ajax.mapper;
+
+import java.io.Serializable;
+
+public class UserMapper implements Serializable{
+
+	private static final long serialVersionUID = -5216048831294830726L;
+	
+	Integer inser
+
+}

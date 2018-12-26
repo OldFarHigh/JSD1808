@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/soft01/GIT/mall"/>
+		<item value="/home/soft01/JSD1808/JSD1808/SPRINGMVC-03-EXCEPTION"/>
+		<item value="/home/soft01/JSD1808/JSD1808/SPRINGMVC-02-USER"/>
 		<item value="/home/soft01/SE/WebServer_v16"/>
 		<item value="/home/soft01/下载/home_work"/>
 		<item value="/home/soft01/下载/FishGame"/>

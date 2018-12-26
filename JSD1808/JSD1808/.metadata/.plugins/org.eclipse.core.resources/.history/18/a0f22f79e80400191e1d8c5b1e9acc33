@@ -1,0 +1,10 @@
+package cn.tedu.mybatis.mapper;
+/**
+ * 
+ * @author OldFarHigh
+ *使用myBaties执行的增删改操作均返回Integer，表示受影响的行数
+ */
+public interface UserMapper {
+	
+	
+}

@@ -1,0 +1,15 @@
+package cn.tedu.ajax.service;
+
+import cn.tedu.ajax.entity.User;
+
+public class UserService {
+	
+	private Integer insert(User user) {
+		
+		return null; 
+	}
+	
+    private	 User findByUsername(String username) {
+		
+	}
+}

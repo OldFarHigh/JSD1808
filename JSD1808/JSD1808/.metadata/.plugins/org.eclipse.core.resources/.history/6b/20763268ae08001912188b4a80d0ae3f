@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户注册</title>
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+
+
+</head>
+<body>	
+	<h1>用户注册</h1>
+	<div>用户名：</div>
+	<div><input id="username"/></div>
+	<div>密码：</div>
+	<div><input id="password"/></div>
+	<div>年龄：</div>
+	<div><input id="age"/></div>
+	<div><input id="reg" type="button" value="注册" ></div>
+	<script type="text/javascript">
+		$("#reg").click(function(){
+			var u = $()"username").val();
+			var p = $()"password").val();
+			var url = "user/reg.do";
+			console.log("data:"+data)
+			$.ajax({
+				"url":url,
+				"data":data,
+				"type":"POST",
+				"dataType":"json",
+				"success":function(json){
+					
+				}
+			})
+		});
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,35 @@
+package Test;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import cn.tedu.mybatis.entity.Department;
+import cn.tedu.mybatis.mapper.DepartmentMapper;
+
+public class DepartmentMapperTestCase {
+
+	private AbstractApplicationContext ac;
+	private DepartmentMapper departmentmapper;
+	@Before
+	public void doBefore() {
+		 ac = new ClassPathXmlApplicationContext("spring-dao.xml");
+		 departmentmapper = ac.getBean("departmentMapper",DepartmentMapper.class);
+	}
+	@After
+	public void doAfter(){
+		ac.close();
+	}
+
+	@Test
+	public void findById(Integer id) {
+		Integer id = 2;
+		Department department = departmentmapper.findById(id);
+		
+		System.out.println("department:"+department);
+	
+		
+	}
+}

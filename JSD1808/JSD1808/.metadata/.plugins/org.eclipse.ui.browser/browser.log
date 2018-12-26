@@ -1093,3 +1093,113 @@
 12月 18, 2018 17:43:46.90 已在现有的浏览器会话中创建新的窗口。
 12月 18, 2018 17:45:35.53 [18089:18132:1218/174535.530197:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
 12月 18, 2018 17:45:35.53 已在现有的浏览器会话中创建新的窗口。
+
+12月 19, 2018 08:43:37.65 NEW SESSION
+12月 19, 2018 08:43:37.65 [4912:4956:1219/084337.650923:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 08:43:37.67 已在现有的浏览器会话中创建新的窗口。
+
+12月 19, 2018 08:46:04.98 NEW SESSION
+12月 19, 2018 08:46:04.98 [5187:5231:1219/084604.981446:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 08:46:04.98 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 08:48:33.09 [5422:5466:1219/084833.089711:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 08:48:33.09 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 09:42:01.82 [7034:7078:1219/094201.827940:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 09:42:01.83 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 09:52:27.71 [7430:7474:1219/095227.714382:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 09:52:27.71 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 09:54:02.74 [7648:7692:1219/095402.749589:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 09:54:02.75 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 10:40:46.54 [8797:8841:1219/104046.548833:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 10:40:46.55 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 10:44:55.50 [9010:9054:1219/104455.503594:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 10:44:55.50 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 11:34:29.45 [9844:9888:1219/113429.450927:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 11:34:29.45 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 11:43:16.34 [10204:10248:1219/114316.345669:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 11:43:16.35 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 11:49:01.81 [10535:10579:1219/114901.817535:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 11:49:01.82 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 13:59:53.76 [12370:12414:1219/135953.768146:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 13:59:53.77 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 14:04:39.28 [12737:12801:1219/140439.279891:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 14:04:39.28 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 14:05:57.41 [12985:13028:1219/140557.414446:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 14:05:57.41 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 14:30:09.67 [14029:14072:1219/143009.677149:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 14:30:09.68 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 14:38:37.11 [14394:14438:1219/143837.118545:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 14:38:37.12 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 15:32:20.67 [15295:15339:1219/153220.671354:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 15:32:20.67 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 15:37:14.15 [15552:15616:1219/153714.158862:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 15:37:14.16 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 15:42:29.15 [15938:15981:1219/154229.154869:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 15:42:29.16 已在现有的浏览器会话中创建新的窗口。
+12月 19, 2018 15:48:05.36 [16171:16214:1219/154805.364338:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 19, 2018 15:48:05.36 已在现有的浏览器会话中创建新的窗口。
+
+12月 20, 2018 09:17:09.41 NEW SESSION
+12月 20, 2018 09:17:09.41 [5431:5475:1220/091709.411260:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 20, 2018 09:17:09.45 已在现有的浏览器会话中创建新的窗口。
+12月 20, 2018 09:55:57.45 [6961:7004:1220/095557.449885:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 20, 2018 09:55:57.46 已在现有的浏览器会话中创建新的窗口。
+12月 20, 2018 10:34:54.59 [8245:8309:1220/103454.598484:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 20, 2018 10:34:54.61 已在现有的浏览器会话中创建新的窗口。
+12月 20, 2018 12:56:26.15 [11254:11298:1220/125626.151239:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 20, 2018 12:56:26.15 已在现有的浏览器会话中创建新的窗口。
+
+12月 20, 2018 15:01:32.81 NEW SESSION
+12月 20, 2018 15:01:32.81 [13775:13818:1220/150132.813168:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 20, 2018 15:01:32.81 已在现有的浏览器会话中创建新的窗口。
+12月 20, 2018 15:35:57.17 [14836:14880:1220/153557.178957:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 20, 2018 15:35:57.18 已在现有的浏览器会话中创建新的窗口。
+12月 20, 2018 15:38:42.78 [15120:15164:1220/153842.781673:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 20, 2018 15:38:42.78 已在现有的浏览器会话中创建新的窗口。
+12月 20, 2018 16:03:12.24 [15722:15765:1220/160312.247274:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 20, 2018 16:03:12.25 已在现有的浏览器会话中创建新的窗口。
+12月 20, 2018 16:05:31.42 [15963:16007:1220/160531.423816:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 20, 2018 16:05:31.42 已在现有的浏览器会话中创建新的窗口。
+12月 20, 2018 16:41:59.27 [16874:16917:1220/164159.274522:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 20, 2018 16:41:59.27 已在现有的浏览器会话中创建新的窗口。
+
+12月 25, 2018 12:02:11.96 NEW SESSION
+12月 25, 2018 12:02:11.96 [9490:9534:1225/120211.966917:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 12:02:11.98 已在现有的浏览器会话中创建新的窗口。
+12月 25, 2018 12:07:15.75 [9799:9842:1225/120715.750202:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 12:07:15.75 已在现有的浏览器会话中创建新的窗口。
+12月 25, 2018 14:30:49.81 [11772:11816:1225/143049.815498:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 14:30:49.81 已在现有的浏览器会话中创建新的窗口。
+12月 25, 2018 14:33:30.73 [12256:12299:1225/143330.730071:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 14:33:30.73 已在现有的浏览器会话中创建新的窗口。
+12月 25, 2018 14:35:43.54 [12501:12565:1225/143543.541881:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 14:35:43.55 已在现有的浏览器会话中创建新的窗口。
+12月 25, 2018 14:37:17.65 [12763:12806:1225/143717.656235:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 14:37:17.66 已在现有的浏览器会话中创建新的窗口。
+12月 25, 2018 14:39:09.92 [12990:13034:1225/143909.926513:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 14:39:09.93 已在现有的浏览器会话中创建新的窗口。
+12月 25, 2018 14:40:21.70 [13219:13262:1225/144021.704362:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 14:40:21.70 已在现有的浏览器会话中创建新的窗口。
+12月 25, 2018 14:41:38.28 [13448:13492:1225/144138.289420:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 14:41:38.29 已在现有的浏览器会话中创建新的窗口。
+12月 25, 2018 15:56:34.16 [15355:15399:1225/155634.167540:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 15:56:34.17 已在现有的浏览器会话中创建新的窗口。
+12月 25, 2018 17:44:34.78 [17616:17659:1225/174434.786438:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 17:44:34.79 已在现有的浏览器会话中创建新的窗口。
+12月 25, 2018 17:49:49.21 [17884:17927:1225/174949.211688:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 17:49:49.21 已在现有的浏览器会话中创建新的窗口。
+12月 25, 2018 17:52:10.37 [18238:18281:1225/175210.370067:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 17:52:10.37 已在现有的浏览器会话中创建新的窗口。
+
+12月 25, 2018 20:00:06.00 NEW SESSION
+12月 25, 2018 20:00:06.00 [20314:20358:1225/200006.007847:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 25, 2018 20:00:06.01 已在现有的浏览器会话中创建新的窗口。
+
+12月 26, 2018 09:09:48.67 NEW SESSION
+12月 26, 2018 09:09:48.67 [5601:5645:1226/090948.675867:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 26, 2018 09:09:48.68 已在现有的浏览器会话中创建新的窗口。
+12月 26, 2018 09:10:59.09 [5884:5928:1226/091059.098681:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 26, 2018 09:10:59.10 已在现有的浏览器会话中创建新的窗口。
+12月 26, 2018 09:45:09.93 [7261:7305:1226/094509.939289:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 26, 2018 09:45:09.94 已在现有的浏览器会话中创建新的窗口。
+12月 26, 2018 11:53:15.15 [11217:11281:1226/115315.156885:ERROR:browser_gpu_channel_host_factory.cc(103)] Failed to launch GPU process.
+12月 26, 2018 11:53:15.16 已在现有的浏览器会话中创建新的窗口。

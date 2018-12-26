@@ -1,0 +1,6 @@
+package cn.tedu.mybatis.mapper;
+
+public class ScoreMapper {
+
+	ScoreVO findById(Integer id);
+}

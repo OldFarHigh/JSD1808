@@ -1,4 +1,4 @@
 #Tomcat publish data
-#Tue Dec 18 17:45:31 CST 2018
-org.eclipse.jst.jee.server\:SPRINGMVC-02-USER=/home/soft01/apache-tomcat-8.5.20/wtpwebapps/SPRINGMVC-02-USER
-org.eclipse.jst.jee.server\:/binary\:/home/soft01/.m2/repository/org/springframework/spring-web/4.3.9.RELEASE/spring-web-4.3.9.RELEASE.jar=/home/soft01/apache-tomcat-8.5.20/wtpwebapps/SPRINGMVC-02-USER/WEB-INF/lib/spring-web-4.3.9.RELEASE.jar
+#Wed Dec 26 11:53:13 CST 2018
+org.eclipse.jst.jee.server\:/binary\:/home/soft01/.m2/repository/org/springframework/spring-web/4.3.9.RELEASE/spring-web-4.3.9.RELEASE.jar=/home/soft01/apache-tomcat-8.5.20/wtpwebapps/AJAX/WEB-INF/lib/spring-web-4.3.9.RELEASE.jar
+org.eclipse.jst.jee.server\:AJAX=/home/soft01/apache-tomcat-8.5.20/wtpwebapps/AJAX

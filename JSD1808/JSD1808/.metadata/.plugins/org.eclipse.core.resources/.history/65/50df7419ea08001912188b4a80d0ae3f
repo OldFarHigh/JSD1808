@@ -1,0 +1,17 @@
+package test;
+/**
+ * a++称为后加加，先取值然后增加
+ * 
+ * @author OldFarHigh
+ *
+ */
+public class DemoTest04 {
+	
+	public static void main(String[] args) {
+		int a =5;
+		for (int i = 0; i < 100; i++) {
+			a=a++;
+		}
+		System.out.println(a);//5
+	}
+}

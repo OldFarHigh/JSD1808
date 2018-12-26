@@ -1,0 +1,28 @@
+package cn.tedu.ajax.entity;
+
+import java.io.Serializable;
+
+public class ResponseResult implements Serializable{
+
+	private static final long serialVersionUID = 2466622190650549542L;
+
+	private Integer stage;
+	private String message;
+	public Integer getStage() {
+		return stage;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setStage(Integer stage) {
+		this.stage = stage;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	@Override
+	public String toString() {
+		return "ResponseResult [stage=" + stage + ", message=" + message + "]";
+	}
+	
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<!--namespace: 映射的接口的全名 -->
+<mapper namespace="cn.tedu.ajax.mapper.UserMapper">
+	<!-- 根据执行的SQL种类选择节点 -->
+	<!-- id：抽象方法的名称 parameterType：抽象方法的参数类型 -->
+	<insert id="insert" parameterType="cn.tedu.ajax.entity.User" useGeneratedKeys="true" keyProperty="id">
+		<!-- SQL语句 参数使用#{User类中的属性名} 不需要分号表示结束 -->
+		INSERT INTO t_user (username,password,age,phone,email) VALUES
+		(#{username},#{password},#{age},#{phone},#{email})
+	</insert>
+
+	<select id="findAll" resultType="cn.tedu.ajax.entity.User">
+		SELECT
+		id,username,password,age,phone,email,is_delete AS isDelete,department
+		from t_user
+	</select>
+
+	<select id="findAllOrderedList" resultType="cn.tedu.ajax.entity.User">
+		SELECT 
+			id,username,password,age,phone,email,is_delete AS isDelete,department
+		FROM 
+			t_user
+		<if test="where !=null">
+		WHERE  
+			${where} 
+		</if>
+		<if test="orderBy !=null">
+		 
+		 	${orderBy}
+		 </if>
+	</select>
+	
+	<select id="findByUsername" resultType="cn.tedu.ajax.entity.User">
+		SELECT
+		id,username,password,age,phone,email FROM t_user WHERE
+		username=#{username}
+		limit 0,1
+	</select>
+
+	<select id="getCount" resultType="java.lang.Integer">
+		SELECT COUNT(id) FROM t_user
+	</select>
+
+	<delete id="del">
+		DELETE FROM t_user WHERE username=#{username}
+	</delete>
+	
+	<delete id="deleteByIds">
+		DELETE FROM 
+			t_user 
+		WHERE 
+			id in
+			<foreach collection="array" item="id" separator="," open="(" close=")" >
+				#{id}
+			</foreach>
+		
+	</delete>
+	<update id="updatePasswordByAge">
+		UPDATE t_user SET password=#{password} WHERE age>#{age}
+	</update>
+
+</mapper>
+

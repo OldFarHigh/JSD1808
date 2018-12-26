@@ -1,0 +1,25 @@
+package Test;
+
+import org.junit.After;
+import org.junit.Before;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import cn.tedu.mybatis.mapper.UserMapper;
+
+public class DepartmentMapperTestCase {
+
+	private AbstractApplicationContext ac;
+	private UserMapper userMapper;
+	@Before
+	public void doBefore() {
+		 ac = new ClassPathXmlApplicationContext("spring-dao.xml");
+		 userMapper = ac.getBean("userMapper",UserMapper.class);
+	}
+	@After
+	public void doAfter(){
+		ac.close();
+	}
+
+		
+}

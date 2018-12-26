@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="cn.tedu.demo.test"/>
+			<item value="cn.tedu.ajax"/>
+			<item value="cn.tedu.mybatis"/>
 			<item value="cn.tedu.spring"/>
 			<item value="cn.tedu.servlet"/>
 			<item value="cn.tedu.test"/>
@@ -10,6 +13,10 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="DEMOTEST"/>
+			<item value="AJAX"/>
+			<item value="MYBATIS"/>
+			<item value="SPRINGMVC-03-EXCEPTION"/>
 			<item value="SPRING-02"/>
 			<item value="SPRING-01"/>
 			<item value="smartmvc-test"/>
@@ -21,10 +28,6 @@
 			<item value="day09-2"/>
 			<item value="day07-test"/>
 			<item value="day07-2"/>
-			<item value="day07"/>
-			<item value="day06-test"/>
-			<item value="day06"/>
-			<item value="day04_Test"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -69,6 +72,9 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/home/soft01/JSD1808/JSD1808/DEMOTest"/>
+			<item value="/home/soft01/JSD1808/JSD1808/AJAX"/>
+			<item value="/home/soft01/JSD1808/JSD1808/SPRINGMVC-03-EXCEPTION"/>
 			<item value="/home/soft01/JSD1808/JSD1808/smartmvc-test"/>
 			<item value="/home/soft01/JSD1808/JSD1808/smartmvc"/>
 			<item value="/home/soft01/JSD1808/JSD1808/day10-2"/>
@@ -81,9 +87,6 @@
 			<item value="/home/soft01/JSD1808/JSD1808/WebServer_v17"/>
 			<item value="/home/soft01/JSD1808/JSD1808/maven"/>
 			<item value="/home/soft01/JSD1808/JSD1808/Test"/>
-			<item value="/home/soft01/JSD1808/JSD1808/TestMaven"/>
-			<item value="/home/soft01/JSD1808/JSD1808"/>
-			<item value="/home/soft01/JSD1808/JSD1808/WebServer_v1"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

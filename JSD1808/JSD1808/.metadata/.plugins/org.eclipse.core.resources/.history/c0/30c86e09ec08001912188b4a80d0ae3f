@@ -1,0 +1,11 @@
+package test;
+
+public class DemoTest05 {
+	
+	public static void main(String[] args) {
+		
+	}
+}
+class Super{
+	
+}

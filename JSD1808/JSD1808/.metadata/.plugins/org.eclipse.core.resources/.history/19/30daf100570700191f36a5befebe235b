@@ -1,0 +1,17 @@
+package cn.tedu.mybatis.entity;
+
+import java.io.Serializable;
+
+public class Student implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -135237606609739118L;
+	
+	private Integer id;
+	private String name;
+	private Integer age;
+	
+	
+}

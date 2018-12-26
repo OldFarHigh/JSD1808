@@ -1,0 +1,21 @@
+package test;
+/**
+ * 统计数字字符串中每个数字的个数
+ * @author OldFarHigh
+ *
+ */
+public class DemoTest02 {
+	
+	/*
+	 * 统计一个数字字符串中每个数字的个数
+	 */
+	public static void main(String[] args) {
+		String str = "1346789745613543135765135465635456";
+		int[] counter = new int[10]; 
+		char c = '0';
+		System.out.println(0);
+		System.out.println((int)'0');
+		System.out.println((int)'A');
+		System.out.println((int)'a');
+	}
+}

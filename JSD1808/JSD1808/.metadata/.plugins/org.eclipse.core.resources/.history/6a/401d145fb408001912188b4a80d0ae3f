@@ -1,0 +1,13 @@
+package snippet;
+
+public class Snippet {
+	<h1>用户注册</h1>
+		<div>用户名：</div>
+		<div><input id="username"/></div>
+		<div>密码：</div>
+		<div><input id="password"/></div>
+		<div>年龄：</div>
+		<div><input id="age"/></div>
+		<div><input id="reg" type="button" value="注册" ></div>
+}
+

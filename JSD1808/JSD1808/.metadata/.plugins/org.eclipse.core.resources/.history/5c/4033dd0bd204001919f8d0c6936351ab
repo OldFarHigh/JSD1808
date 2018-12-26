@@ -1,0 +1,7 @@
+# data-source
+url=jdbc:mysql://localhost:33306/t_ums?useUnicode=true&characterEncoding=utf8
+driver=
+username
+password
+initiaiSize
+maxActive

@@ -1,0 +1,16 @@
+package cn.tedu.mybatis.mapper;
+
+import cn.tedu.mybatis.entity.User;
+
+/**
+ * 
+ * @author OldFarHigh
+ *使用myBaties执行的增删改操作均返回`Integer`，表示受影响的行数
+ *
+ *功能：
+ *
+ *业务：
+ */
+public interface UserMapper {
+	Integer insert(User user);
+}

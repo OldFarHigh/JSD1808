@@ -1,0 +1,9 @@
+package Test;
+
+public class SimpleTestCase {
+	
+	@Test
+	public void insert() {
+		
+	}
+}

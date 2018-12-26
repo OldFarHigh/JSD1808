@@ -1,0 +1,10 @@
+package test;
+
+public class DemoTest03 {
+	
+	public static void main(String[] args) {
+		String str = "123";
+		int n = Integer.parseInt(7);
+		System.out.println(n);
+	}
+}

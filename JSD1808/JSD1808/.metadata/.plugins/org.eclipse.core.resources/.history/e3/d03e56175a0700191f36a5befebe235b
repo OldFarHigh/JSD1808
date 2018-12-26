@@ -1,0 +1,7 @@
+package cn.tedu.mybatis.mapper;
+
+public interface ClazzMapper {
+	
+	ClazzVO findById()
+	
+}

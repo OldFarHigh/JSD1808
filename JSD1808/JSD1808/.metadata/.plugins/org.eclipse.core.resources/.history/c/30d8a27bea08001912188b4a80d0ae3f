@@ -1,0 +1,22 @@
+package test;
+/**
+ * a++称为后加加，先取值然后增加
+ * 1、++计算优先级高，先计算
+ * 		1.先取a的值5，为a++表达式整体的值5
+ * 		2.然后将a的值增加1，a为6
+ * 2、= 赋值计算优先级低，最后计算
+ * 		1.将a++表达式的值5赋值给a，a为5
+ * 		
+ * @author OldFarHigh
+ *
+ */
+public class DemoTest04 {
+	
+	public static void main(String[] args) {
+		int a =5;
+		for (int i = 0; i < 100; i++) {
+			a=a++;
+		}
+		System.out.println(a);//5
+	}
+}

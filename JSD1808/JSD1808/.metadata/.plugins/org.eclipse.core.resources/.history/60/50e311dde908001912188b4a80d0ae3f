@@ -1,0 +1,12 @@
+package test;
+
+public class DemoTest04 {
+	
+	public static void main(String[] args) {
+		int a =5;
+		for (int i = 0; i < 100; i++) {
+			a=a++;
+		}
+		System.out.println(a);
+	}
+}

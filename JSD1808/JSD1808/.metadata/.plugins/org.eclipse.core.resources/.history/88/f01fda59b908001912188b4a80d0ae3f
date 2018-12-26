@@ -1,0 +1,11 @@
+package Test;
+
+import org.junit.Test;
+
+public class SimpleTestCase {
+	
+	@Test
+	public void insert() {
+		
+	}
+}

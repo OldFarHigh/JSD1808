@@ -1,0 +1,17 @@
+package test;
+/**
+ * 
+ * @author OldFarHigh
+ *
+ */
+public class DemoTest02 {
+	
+	/*
+	 * 统计一个数字字符串中每个数字的个数
+	 */
+	public static void main(String[] args) {
+		char c = '0';
+		System.out.println(0);
+		System.out.println((int)c);
+	}
+}

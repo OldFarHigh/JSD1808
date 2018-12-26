@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<!-- namespace：映射的接口的全名 -->
+<mapper namespace="cn.tedu.mybatis.mapper.ScoreMapper">
+	<!-- resultMap：指导MyBatis将查询结果封装到对象中 -->
+	<!-- id：节点的唯一标识 -->
+	<!-- type：数据类型 -->
+	<resultMap id="ScoreVOMap" type="cn.tedu.mybatis.vo.ScoreVO">
+		<!-- id节点：主键的配置 -->
+		<!-- column：查询结果的列名 -->
+		<!-- property：数据类型的属性名 -->
+		<id column="id" property="stuId" />
+		<!-- 其它结果的配置 -->
+		<result column="name" property="stuName" />
+		<!-- collection：配置List集合 -->
+		<!-- ofType：集合中放的哪种类型的数据 -->
+		<collection property="score" ofType="cn.tedu.mybatis.entity.Score">
+			<!-- 自此开始，property表示User中的属性名 -->
+			<id column="stu_id" property="id" />
+			<result column="stu_name" property="stu_id" />
+			<result column="age" property="age" />
+			<result column="class_id" property="class_id" />
+		</collection>
+	</resultMap>
+	
+	<select id="findById" resultMap="ScoreVOMap">
+		SELECT 
+			t_student.id ,t_student.name, 
+			t_score.id AS sc_id,subject,score
+		FROM
+			t_score
+		INNER JOIN
+			t_student
+		ON
+			t_student.id=t_score.stu_id
+		WHERE 
+			t_student.id=#{id}
+	</select>
+</mapper>
+
+

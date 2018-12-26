@@ -1,0 +1,14 @@
+package test;
+
+public class DemoTest01 {
+
+	public static void main(String[] args) {
+		String str = "ASDJIKHLKHLKHFLKHLKSHLIGFHSLIHFOYHLIKGHIKSHGKH";
+		int[] counter = new int[26];
+		for (int i = 0; i < str.length(); i++) {
+			char c = str.charAt(i);
+			
+			counter[c-'A']++;
+		}
+	}
+}

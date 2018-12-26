@@ -1,0 +1,8 @@
+package test;
+
+public class DemoTest02 {
+	
+	/*
+	 * 统计一个数字字符串中每个数字的个数
+	 */
+}

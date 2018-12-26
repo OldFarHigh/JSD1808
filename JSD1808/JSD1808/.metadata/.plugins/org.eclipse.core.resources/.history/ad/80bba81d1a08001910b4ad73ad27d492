@@ -1,0 +1,8 @@
+package cn.tedu.ajax.entity;
+
+public class ResponseResult {
+
+	private Integer stage;
+	private String message;
+	
+}

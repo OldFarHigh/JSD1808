@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON</title>
+</head>
+<body>
+	<script>
+
+		var data={"name":"张三","from":"北京","age":25};
+		alert(user.name);
+	</script>
+</body>
+</html>
